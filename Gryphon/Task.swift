@@ -9,13 +9,13 @@ import Foundation
 public final class Task<Response,Error> {
 
     // Success handler type.
-    typealias Fulfill = Response -> Void
+    public typealias Fulfill = Response -> Void
 
     // Failure handler type.
-    typealias Reject = Error -> Void
+    public typealias Reject = Error -> Void
     
     // Initializer must declare both fullfill and reject cases.
-    typealias Initializer = (_: Fulfill, _: Reject) -> Void
+    public typealias Initializer = (_: Fulfill, _: Reject) -> Void
     
     // Fullfil handler.
     private var fulfill: Fulfill?
@@ -24,7 +24,7 @@ public final class Task<Response,Error> {
     private var reject: Reject?
     
     // In case of succeed ,It is able to process the result of response.
-    func success(response handler: Fulfill) -> Self {
+    public func success(response handler: Fulfill) -> Self {
         
         fulfill = handler
         
@@ -33,7 +33,7 @@ public final class Task<Response,Error> {
     }
     
     // In case of failure ,It will be able to process the error by reason.
-    func failure(error handler: Reject) -> Self {
+    public func failure(error handler: Reject) -> Self {
         
         reject = handler
         
@@ -42,7 +42,7 @@ public final class Task<Response,Error> {
     }
     
     // Initializing by closure of initializar.
-    init(@noescape initializar: Initializer ) {
+    public init(@noescape initializar: Initializer ) {
         
         initializar({ response in
             

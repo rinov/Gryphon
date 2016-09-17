@@ -7,7 +7,7 @@
 //
 
 import Foundation
-//import Alamofire
+import Alamofire
 import Gryphon
 
 final class API {
@@ -20,23 +20,80 @@ final class API {
 
 extension API {
 
-    final class Twitter {
+    final class Twitter: Requestable {
 
-        let baseURL = "http://"
-
+        //MARK: Endpoint infomation
+        
+        static let baseURL = "https://api.twitter.com/1.1/statuses/"
+        
         enum Router: String {
             
-            case timeline = "timeline"
+            case timeline = "user_timeline.json"
             
-            case follow = "follow"
+            case follow = "follow.json"
             
-            case follower = "follower"
+            case follower = "follower.json"
             
         }
+        
+        static var router: Router = .timeline
 
-        var router: Router?
+        //MARK: Requestable
+        
+        static var headerFields: [String: String] {
+            
+            // Customize your header
+            return [:]
+        
+        }
+        
+        static var path: String {
+
+            return baseURL + router.rawValue
+            
+        }
+        
+        //MARK: Task type
+        
+        typealias TaskType = Task<Timeline,ErrorType>
         
         
+        //MARK: API request
+        
+        static func getTimeline() -> TaskType {
+            
+            let task: TaskType = TaskType { success, failure in
+                
+                Alamofire.request(.POST, path)
+                    .responseJSON(completionHandler: { response in
+
+                        print(response.result.value)
+                        
+                        let yourOwnCheck = true
+                        
+                        if yourOwnCheck {
+                            
+                            let timeline = Timeline()
+                            
+                            // Object mapping in your favorite way
+                            
+                            success(timeline)
+                            
+                        }else{
+                            
+                            failure(ResponseError.unexceptedResponse(response.result.value ?? ""))
+                            
+                        }
+                        
+                        
+                    })
+                
+            }
+            
+            return task
+            
+        }
+    
         
     }
     

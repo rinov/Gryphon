@@ -16,6 +16,7 @@
 		72F8A1BA1D8D297700883B73 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8A1B91D8D297700883B73 /* API.swift */; };
 		72F8A1BD1D8D2CB100883B73 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */; };
 		72F8A1BE1D8D2CB100883B73 /* Gryphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */; };
+		72F8A1C01D8D31BD00883B73 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8A1BF1D8D31BD00883B73 /* Timeline.swift */; };
 		DF63E4484990BA5883D4FA23 /* Pods_Gryphon_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */; };
 		E4BD5B7CC9ED7A7DAE6C2198 /* Pods_Gryphon_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		72F8A1B91D8D297700883B73 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gryphon.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Gryphon/Gryphon.framework"; sourceTree = "<group>"; };
+		72F8A1BF1D8D31BD00883B73 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804D3EF1807FF3189FA843DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8B06993FFCCA6FAAE646A398 /* Pods-Gryphon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gryphon_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gryphon_Example/Pods-Gryphon_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				72F8A1B91D8D297700883B73 /* API.swift */,
+				72F8A1BF1D8D31BD00883B73 /* Timeline.swift */,
 			);
 			name = "Example for Gryphon";
 			path = Gryphon;
@@ -370,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F8A1C01D8D31BD00883B73 /* Timeline.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				72F8A1BA1D8D297700883B73 /* API.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

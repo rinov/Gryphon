@@ -17,7 +17,7 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Gryphon/Classes/**/*",
+  "source_files": "Gryphon/**/*",
   "dependencies": {
     "Alamofire": [
       "~> 3.0"

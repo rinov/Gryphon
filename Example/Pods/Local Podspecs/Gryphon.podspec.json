@@ -1,18 +1,17 @@
 {
   "name": "Gryphon",
   "version": "0.1.0",
-  "summary": "A short description of Gryphon.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/Gryphon",
+  "summary": "Type safe and useful API kit for Alamofire",
+  "homepage": "https://github.com/rinov/Gryphon",
   "license": {
-    "type": "MIT",
+    "type": "Apache License 2.0",
     "file": "LICENSE"
   },
   "authors": {
     "Ryo Ishikawa": "rinov@rinov.jp"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/Gryphon.git",
+    "git": "https://github.com/rinov/Gryphon.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Swift2.2+
+iOS8+
+
 ## Installation
 
 Gryphon is available through [CocoaPods](http://cocoapods.org). To install
@@ -20,10 +23,7 @@ it, simply add the following line to your Podfile:
 pod "Gryphon"
 ```
 
-## Author
-
-Ryo Ishikawa, rinov@rinov.jp
-
 ## License
 
-Gryphon is available under the MIT license. See the LICENSE file for more info.
+Apache License 2.0
+https://github.com/rinov/Gryphon/blob/master/LICENSE

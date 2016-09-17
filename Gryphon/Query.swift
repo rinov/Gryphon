@@ -7,7 +7,7 @@
 import Foundation
 
 // Serves query making which consisting of multiple query.
-final class Query {
+public final class Query {
     
     var isEmpty: Bool {
 

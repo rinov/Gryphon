@@ -13,6 +13,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		72F8A1BA1D8D297700883B73 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8A1B91D8D297700883B73 /* API.swift */; };
+		72F8A1BD1D8D2CB100883B73 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */; };
+		72F8A1BE1D8D2CB100883B73 /* Gryphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */; };
 		DF63E4484990BA5883D4FA23 /* Pods_Gryphon_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */; };
 		E4BD5B7CC9ED7A7DAE6C2198 /* Pods_Gryphon_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		607FACE51AFB9204008FA782 /* Gryphon_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Gryphon_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		72F8A1B91D8D297700883B73 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gryphon.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Gryphon/Gryphon.framework"; sourceTree = "<group>"; };
 		7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804D3EF1807FF3189FA843DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8B06993FFCCA6FAAE646A398 /* Pods-Gryphon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gryphon_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gryphon_Example/Pods-Gryphon_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F8A1BD1D8D2CB100883B73 /* Alamofire.framework in Frameworks */,
+				72F8A1BE1D8D2CB100883B73 /* Gryphon.framework in Frameworks */,
 				E4BD5B7CC9ED7A7DAE6C2198 /* Pods_Gryphon_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +107,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				72F8A1B91D8D297700883B73 /* API.swift */,
 			);
 			name = "Example for Gryphon";
 			path = Gryphon;
@@ -142,6 +151,8 @@
 		B9FDD04B829E9902258768EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */,
+				72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */,
 				7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */,
 				C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */,
 			);
@@ -360,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				72F8A1BA1D8D297700883B73 /* API.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

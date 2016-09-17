@@ -7,7 +7,7 @@
 import Foundation
 
 // API requests must be implemented `Requestable`.
-protocol Requestable : class {
+public protocol Requestable : class {
 
     static var headerFields: [String: String] { get }
     

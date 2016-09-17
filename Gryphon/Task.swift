@@ -6,7 +6,7 @@
 
 import Foundation
 
-final class Task<Response,Error> {
+public final class Task<Response,Error> {
 
     // Success handler type.
     typealias Fulfill = Response -> Void

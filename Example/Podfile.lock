@@ -1,5 +1,7 @@
 PODS:
-  - Gryphon (0.1.0)
+  - Alamofire (3.5.0)
+  - Gryphon (0.1.0):
+    - Alamofire (~> 3.0)
   - Nimble (3.2.0)
   - Quick (0.9.3)
 
@@ -13,7 +15,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Gryphon: c3e6c6c424d066275f1a3b1ecb7f658d5ef89199
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  Gryphon: 2b26f6f375959e05b00e149ab2361b9d6dd9a662
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
 

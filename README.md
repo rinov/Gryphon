@@ -1,6 +1,6 @@
 # Gryphon
 
-[![CI Status](http://img.shields.io/travis/Ryo Ishikawa/Gryphon.svg?style=flat)](https://travis-ci.org/Ryo Ishikawa/Gryphon)
+[![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
 
 ## Example
@@ -148,6 +148,14 @@ API.Twitter.getTimeline()
         }
 
 ```
+
+## Coming soon
+
+`Retry`
+
+`Progress`
+
+`Delay`
 
 ## License
 

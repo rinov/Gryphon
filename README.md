@@ -2,6 +2,9 @@
 
 [![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
+[![Dependencies](https://img.shields.io/badge/dependencies-Alamofire-red.svg)](https://img.shields.io/badge/dependencies-Alamofire-red.svg)
+[![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
+[![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
 
 ## Example
 
@@ -13,10 +16,11 @@ Swift2.2+
 
 iOS8+
 
+Alamofire 3.x
+
 ## Installation
 
-Gryphon is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+In your Podfile:
 
 ```ruby
 pod "Gryphon"
@@ -86,7 +90,6 @@ extension API {
         
         
         //API request
-        
         static func getTimeline() -> TaskType {
             
             let task: TaskType = TaskType { success, failure in
@@ -132,11 +135,15 @@ API.Twitter.getTimeline()
         
         .success { response in
 
-            // You can use `response` without nil checking
-            // The type of `response` is automatically inferred to Timeline
-            print(response.count)
-            print(response.date)
-            print(response.contents)
+            /*
+            * You can use `response` without nil checking.
+            * The type of `response` is automatically inferred to Timeline.
+            */
+            let timeline: Timeline = response // This is ok
+            let timeline = response // This is ok
+            print(response.count) // This is Ok
+
+            
             
         }
         
@@ -154,6 +161,8 @@ API.Twitter.getTimeline()
 `Retry`
 
 `Progress`
+
+`Cancel`
 
 `Delay`
 

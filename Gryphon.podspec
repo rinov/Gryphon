@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Gryphon/Classes/**/*'
+  s.source_files = 'Gryphon/**/*'
   s.dependency 'Alamofire', '~> 3.0'
 
 end

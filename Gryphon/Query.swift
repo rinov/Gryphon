@@ -61,7 +61,7 @@ final class Query {
     
     func hasKey(key: String) -> Bool {
         
-        guard let key = queries[key] else { return false }
+        guard let _ = queries[key] else { return false }
         
         return true
         

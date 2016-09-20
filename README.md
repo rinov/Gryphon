@@ -6,110 +6,94 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 [![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-Swift2.2+
-
-iOS8+
-
-Alamofire 3.x
-
-## Installation
-
-In your Podfile:
-
-```ruby
-pod "Gryphon"
-```
-
-## How to use this
-
-### Preparing
+Gryphon is an HTTP client using Alamofire that's type safe and convenient.
 
 ```
-// Response model
-final class Timeline {
+API.Endpoint.request()
+        
+        .success { response in
+            // Do something
+        }
+        
+        .failure { error in
+            // Do someting 
+        }
+
+```
+
+
+### How to use this? (Example for retrieving from Twitter API)
+
+First of all, Create a API class for proxy pattern.
+
+e.g.
+
+```
+
+class API {
     
-    var count: Int!
+    let baseURL = "https://api.twitter.com/"
     
-    var date: NSDate!
+    let version = "1.1"
     
-    var contents: [String]!
+    ....
     
 }
 
 ```
 
-### Defination
-
-First of all, create your API class.
-
-```
-
-final class API {
-    
-    let proxy = "http://"
-    
-    let version = "v1"
-    
-}
-
-```
-
-Next step , implement your request.
+Next step , Implement functional class.
 
 ```
 
 extension API {
 
-    final class Twitter: Requestable {
+    class Twitter: Requestable {
 
-        //Endpoint information
-        static let url = "https://api.twitter.com/1.1/statuses/"
+        enum Router {
         
-        //Requestable protocol
+            case status = "/status/"
+            // ... and so on
+            
+        }
+        
+        var route: Router = .status // Default value of this endpoint
+            
+        // Requestable protocol(Required)
         static var headerFields: [String: String] {
             
             // Customize your header
             return [:]
         
         }
-        
+
+        // Requestable protocol(Required)
         static var path: String {
 
-            return baseURL + router.rawValue
+            return baseURL + "/" + version + "/" + router.rawValue
             
         }
         
-        //Task type. `Task<ResponseType,ErrorType>`
-        typealias TaskType = Task<Timeline,ErrorType>
-        
-        
-        //API request
-        static func getTimeline() -> TaskType {
+        /*  API request
+         *  `ResponseType` is your own Model class
+         */
+        static func getTimeline() -> TaskType< ResponseType, ErrorType> {
             
             let task: TaskType = TaskType { success, failure in
                 
                 Alamofire.request(.POST, path)
                     .responseJSON(completionHandler: { response in
 
-                        let yourOwnCheck = true
-                        
+                        // Object mapping in your favorite way
+
+                        // If the mapping is succeed
                         if yourOwnCheck {
                             
-                            let timeline = Timeline()
-                            
-                            // Object mapping in your favorite way
-                            
-                            success(timeline)
+                            success(response)
                             
                         }else{
                             
-                            failure(ResponseError.unexceptedResponse(response.result.value ?? ""))
+                            failure(ResponseError.unexceptedResponse("Cause(String) or AnyObject is available."))
                             
                         }
                         
@@ -137,13 +121,12 @@ API.Twitter.getTimeline()
 
             /*
             * You can use `response` without nil checking.
-            * The type of `response` is automatically inferred to Timeline.
+            * The type of `response` is automatically inferred to your Model class.
+            * e.g. your Model class is `Timeline`
             */
-            let timeline: Timeline = response // This is ok
-            let timeline = response // This is ok
-            print(response.count) // This is Ok
-
             
+            let timeline: Timeline = response // This is ok because response is NOT optional type
+            print(response.count) // this is ok because response have already object mapping
             
         }
         
@@ -156,7 +139,7 @@ API.Twitter.getTimeline()
 
 ```
 
-## Coming soon
+## TODO
 
 `Retry`
 
@@ -165,6 +148,25 @@ API.Twitter.getTimeline()
 `Cancel`
 
 `Delay`
+
+## Requirements
+
+Swift2.2+
+
+iOS8+
+
+Alamofire 3.x
+
+## Installation
+
+In your Podfile:
+
+```ruby
+pod "Gryphon"
+```
+and
+
+`pod install`
 
 ## License
 

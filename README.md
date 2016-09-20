@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 [![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
 
-Gryphon is an HTTP client using Alamofire that's type safe and convenient.
+Gryphon is an HTTP client kit using Alamofire that's type safe and convenient.
 
 ```
 API.Endpoint.request()

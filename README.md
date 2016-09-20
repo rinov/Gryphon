@@ -26,7 +26,7 @@ API.Endpoint.request()
 
 ### How to use this? (Example for retrieving from Twitter API)
 
-First of all, Create a API class for proxy pattern.
+First of all, Create a API class.
 
 e.g.
 

@@ -59,7 +59,7 @@ extension API {
         
         var route: Router = .status // Default value of this endpoint
             
-        // Requestable protocol(Required)
+        // Requestable protocol (Required)
         static var headerFields: [String: String] {
             
             // Customize your header
@@ -67,16 +67,14 @@ extension API {
         
         }
 
-        // Requestable protocol(Required)
+        // Requestable protocol (Required)
         static var path: String {
 
             return baseURL + "/" + version + "/" + router.rawValue
             
         }
         
-        /*  API request
-         *  `ResponseType` is your own Model class
-         */
+        // `ResponseType` is your own Model class
         static func getTimeline() -> TaskType< ResponseType, ErrorType> {
             
             let task: TaskType = TaskType { success, failure in

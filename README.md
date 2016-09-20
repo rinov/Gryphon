@@ -8,6 +8,8 @@
 
 Gryphon is an HTTP client kit using Alamofire that's type safe and convenient.
 
+[![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
+
 ```
 API.Endpoint.request()
         

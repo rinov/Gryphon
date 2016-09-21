@@ -42,13 +42,13 @@ public final class Task<Response,Error> {
     }
     
     // Initializing by closure of initializar.
-    public init(@noescape initializar: Initializer ) {
+    public init(initializar: Initializer ) {
         
-        initializar({ response in
+        initializar({ [unowned self] response in
             
             self.fulfill?(response)
             
-        }) { error in
+        }) { [unowned self] error in
             
             self.reject?(error)
             

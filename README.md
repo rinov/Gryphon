@@ -2,11 +2,10 @@
 
 [![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
-[![Dependencies](https://img.shields.io/badge/dependencies-Alamofire-red.svg)](https://img.shields.io/badge/dependencies-Alamofire-red.svg)
 [![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
 [![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
 
-Gryphon is an HTTP client kit using Alamofire that's type safe and convenient.
+Gryphon is an REST API kit that's type safe and convenient.
 
 [![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
 
@@ -155,8 +154,6 @@ Swift2.2+
 
 iOS8+
 
-Alamofire 3.x
-
 ## Installation
 
 In your Podfile:
@@ -170,6 +167,6 @@ and
 
 ## License
 
-Apache License 2.0
+MIT
 
 https://github.com/rinov/Gryphon/blob/master/LICENSE

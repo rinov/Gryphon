@@ -17,6 +17,9 @@ public final class Task<Response,Error> {
     // Cancel handler type.
     public typealias Cancel = Void -> Void
     
+    // Validation handler type.
+    public typealias Validate = Any? -> Bool
+    
     // Initializer must declare both fullfill and reject cases.
     public typealias Initializer = (_: Fulfill, _: Reject) -> Void
     
@@ -28,6 +31,12 @@ public final class Task<Response,Error> {
 
     // Cancel handler.
     private var cancel: Cancel?
+    
+    // Validation handler.
+    private var validate: Validate?
+    
+    // Initializer handler.
+    private var initializer: Initializer?
 
     // Retry count
     private lazy var retry: Int = 0
@@ -53,7 +62,7 @@ public final class Task<Response,Error> {
         
     }
     
-    //If the request was rejected by your `validate`, It will be able to perform to your cancel at last.
+    // If the request was rejected by your `validate`, It will be able to perform to your cancel at last.
     public func cancel(canceler handler: Cancel) -> Self {
         
         cancel = handler
@@ -62,8 +71,18 @@ public final class Task<Response,Error> {
         
     }
     
+    // The validate function for response from your request.
+    public func validate(validater handler: Validate) -> Self {
+        
+        validate = handler
+        
+        return self
+        
+    }
+
+    
     // The maximum number of retry.
-    public func retry(times: Int) -> Self {
+    public func retry(max times: Int) -> Self {
         
         retry = times
         
@@ -72,27 +91,54 @@ public final class Task<Response,Error> {
     }
     
     // The time of interval for API request.
-    public func interval(milliseconds: Double) -> Self {
-        
-        interval = milliseconds
+    public func interval(milliseconds ms: Double) -> Self {
+
+        interval = ms
         
         return self
         
     }
     
     // Initializing by closure of `initializar`.
-    public init(initializar: Initializer ) {
+    public init(initClosuer: Initializer ) {
         
-        initializar({ response in
-            
+        initializer = initClosuer
+        
+        initClosuer({ response in
+
             self.fulfill?(response)
             
         }) { error in
             
             self.reject?(error)
+
+            self.doRetry()
             
         }
         
+    }
+    
+    private func doRetry() {
+        
+        if retry > 0 {
+            
+            retry -= 1
+
+            print("retry:\(retry)")
+            
+            initializer?({ response in
+                
+                self.fulfill?(response)
+            
+            }){ error in
+                
+                self.reject?(error)
+            
+                self.doRetry()
+            }
+            
+        }
+
     }
     
 }

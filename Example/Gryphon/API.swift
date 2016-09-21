@@ -59,7 +59,7 @@ extension API {
                         
                         // Object mapping in your favorite way
 
-                        let yourOwnCheck = true
+                        let yourOwnCheck = false
                         
                         if yourOwnCheck {
                             

@@ -14,11 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         API.Twitter.getTimeline()
+            .retry(max: 5)
+            .interval(milliseconds: 300)
         
             .success { response in
-
-                // You can use `response` without nil cheking
-                // The type of `response` is automatically inferred to your `ResponseClass`
 
                 print("success")
                 
@@ -26,8 +25,6 @@ class ViewController: UIViewController {
             
             .failure { error in
 
-                // Check the reason of error
-                
                 print("error")
                 
             }

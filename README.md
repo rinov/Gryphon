@@ -43,7 +43,9 @@ final class API {
 
 ```
 
-Next step , Implement functional class.
+Next step , Implement your request in compliance with `Requestable` protocol.
+
+e.g. using `Alamofire`
 
 ```swift
 
@@ -58,7 +60,7 @@ extension API {
             
         }
         
-        var route: Router = .status
+        var router: Router = .status
             
         // required `Requestable`
         static var baseURL: String {
@@ -76,6 +78,9 @@ extension API {
         
         // `Any` in TaskType is your Response class
         static func getTimeline() -> TaskType< Any, ErrorType> {
+            
+            // Switching the router
+            router = .status
             
             let task = TaskType { success, failure in
                 
@@ -115,6 +120,13 @@ After that you can use it like this.
 
 API.Twitter.getTimeline()
         
+        // It will retry the API request if that is timeout or failed.
+        .retry(max: 3)
+        
+        // Specify the interval time of retry.
+        .interval(milliseconds: 500)
+        
+        // If the response is valid, This will be called.
         .success { response in
 
             /*
@@ -128,6 +140,7 @@ API.Twitter.getTimeline()
             
         }
         
+        // If the response is INVALID, This will be called.
         .failure { error in
 
             // Check the reason of error

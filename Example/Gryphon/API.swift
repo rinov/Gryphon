@@ -10,7 +10,15 @@ import Foundation
 import Alamofire
 import Gryphon
 
-final class API {}
+final class API {
+
+    /*
+     *
+     * Your common property or function.
+     *
+     */
+    
+}
 
 extension API {
     

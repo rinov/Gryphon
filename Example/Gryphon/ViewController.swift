@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Example
+        
         API.Twitter.getTimeline()
-            .retry(max: 11)
-            .interval(milliseconds: 500)
+            .retry(max: 5)
+            .interval(milliseconds: 1000)
         
             .success { response in
 

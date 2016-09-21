@@ -10,21 +10,11 @@ import Foundation
 import Alamofire
 import Gryphon
 
-final class API {
-    
-    let proxy = "http://"
-    
-    let version = "v1"
-    
-}
+final class API {}
 
 extension API {
-
+    
     final class Twitter: Requestable {
-
-        //MARK: Endpoint infomation
-        
-        static let baseURL = "https://api.twitter.com/1.1/statuses/"
         
         enum Router: String {
             
@@ -38,50 +28,46 @@ extension API {
         
         static var router: Router = .timeline
 
-        //MARK: Requestable
+        // required `Requestable`
         
-        static var headerFields: [String: String] {
+        static var baseURL: String {
             
-            // Customize your header
-            return [:]
-        
+            return "https://api.twitter.com/1.1/statuses/"
+            
         }
-        
-        static var path: String {
 
+        // required `Requestable`
+
+        static var path: String {
+            
             return baseURL + router.rawValue
             
         }
         
-        //MARK: Task type
+        // `Task type` = Task<YourResponseClass,ErrorType>
         
-        typealias TaskType = Task<Timeline,ErrorType>
+        typealias TaskType = Task<Any,ErrorType>
         
-        
-        //MARK: API request
-        
-        static func getTimeline() -> TaskType {
+        class func getTimeline() -> TaskType {
             
-            let task: TaskType = TaskType { success, failure in
+            let task = TaskType { success, failure in
                 
                 Alamofire.request(.POST, path)
                     .responseJSON(completionHandler: { response in
 
                         print(response.result.value)
                         
+                        // Object mapping in your favorite way
+
                         let yourOwnCheck = true
                         
                         if yourOwnCheck {
                             
-                            let timeline = Timeline()
-                            
-                            // Object mapping in your favorite way
-                            
-                            success(timeline)
+                            success(response)
                             
                         }else{
                             
-                            failure(ResponseError.unexceptedResponse(response.result.value ?? ""))
+                            failure(ResponseError.unexceptedResponse(response.description))
                             
                         }
                         
@@ -93,8 +79,7 @@ extension API {
             return task
             
         }
-    
-        
+
     }
-    
+
 }

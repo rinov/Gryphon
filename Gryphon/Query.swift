@@ -7,6 +7,7 @@
 import Foundation
 
 // Serves query making which consisting of multiple query.
+
 public final class Query {
     
     var isEmpty: Bool {
@@ -67,8 +68,6 @@ public final class Query {
         
     }
     
-    //MARK: Private Methods
- 
     private func joinElements() -> String {
         
         let valueSeparator = "="

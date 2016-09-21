@@ -13,26 +13,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // API request
-        
         API.Twitter.getTimeline()
         
-        .success { response in
+            .success { response in
 
-            // You can use `response` without nil cheking
-            // The type of `response` is automatically inferred to Timeline
-            print(response.count)
-            print(response.date)
-            print(response.contents)
-            
-        }
-        
-        .failure { error in
+                // You can use `response` without nil cheking
+                // The type of `response` is automatically inferred to your `ResponseClass`
 
-            // Check the reason of error
-            print(error)
+                print("success")
+                
+            }
             
-        }
+            .failure { error in
+
+                // Check the reason of error
+                
+                print("error")
+                
+            }
         
         
     }

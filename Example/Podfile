@@ -2,6 +2,7 @@ use_frameworks!
 
 target 'Gryphon_Example' do
   pod 'Gryphon', :path => '../'
+  pod 'Alamofire', '~> 3.0'
 
   target 'Gryphon_Tests' do
     inherit! :search_paths

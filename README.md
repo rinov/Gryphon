@@ -6,7 +6,7 @@
 [![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)
 
-Gryphon is an REST API kit that's type safe and convenient.
+Gryphon is a REST API kit that's type safe and convenient :yum:
 
 [![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
 
@@ -27,9 +27,9 @@ API.Endpoint.request()
 ```
 
 
-### How to use this? (Example for retrieving from Twitter API)
+### How to use this?:eyes: (Example for retrieving from Twitter API)
 
-First of all, Create a API class.
+First of all, Create an API class.
 
 e.g.
 
@@ -76,7 +76,7 @@ extension API {
             
         }
         
-        // `Any` in TaskType is your Response class
+        // `Any` in TaskType is your Response class.
         static func getTimeline() -> TaskType< Any, ErrorType> {
             
             // Switching the router
@@ -87,9 +87,9 @@ extension API {
                 Alamofire.request(.POST, path)
                     .responseJSON(completionHandler: { response in
 
-                        // Object mapping in your favorite way
+                        // Object mapping in your favorite way.
 
-                        // If the mapping is succeed
+                        // If the mapping is succeed.
                         if yourOwnCheck {
                             
                             success(response)

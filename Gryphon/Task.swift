@@ -121,7 +121,7 @@ public final class Task<Response,Error> {
 
         if retry > maximumRetryCount {
             
-            return fatalError("The retry count is too many.\nPlease check it again.")
+            fatalError("The retry count is too many.\nPlease check it again.")
             
         }
         
@@ -131,7 +131,7 @@ public final class Task<Response,Error> {
 
             if interval > maximumIntervalTime {
                 
-                return fatalError("the interval time is too much.\nPlease check it again.")
+                fatalError("the interval time is too much.\nPlease check it again.")
                 
             }
             

@@ -10,8 +10,11 @@ Gryphon is an REST API kit that's type safe and convenient.
 
 [![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
 
-```
+```swift
+
 API.Endpoint.request()
+        .retry(max: 3)
+        .interval(milliseconds: 500)
         
         .success { response in
             // Do something
@@ -30,13 +33,9 @@ First of all, Create a API class.
 
 e.g.
 
-```
+```swift
 
-class API {
-    
-    let baseURL = "https://api.twitter.com/"
-    
-    let version = "1.1"
+final class API {
     
     ....
     
@@ -44,42 +43,46 @@ class API {
 
 ```
 
-Next step , Implement functional class.
+Next step , Implement your request in compliance with `Requestable` protocol.
 
-```
+e.g. using `Alamofire`
+
+```swift
 
 extension API {
 
-    class Twitter: Requestable {
+    final class Twitter: Requestable {
 
-        enum Router {
+        enum Router: String {
         
             case status = "/status/"
             // ... and so on
             
         }
         
-        var route: Router = .status // Default value of this endpoint
+        var router: Router = .status
             
-        // Requestable protocol (Required)
-        static var headerFields: [String: String] {
+        // required `Requestable`
+        static var baseURL: String {
             
-            // Customize your header
-            return [:]
-        
+            return "https://api.twitter.com/1.1/statuses/"
+            
         }
 
-        // Requestable protocol (Required)
+        // required `Requestable`
         static var path: String {
-
-            return baseURL + "/" + version + "/" + router.rawValue
+            
+            return baseURL + router.rawValue
             
         }
         
-        // `ResponseType` is your own Model class
-        static func getTimeline() -> TaskType< ResponseType, ErrorType> {
+        // `Any` in TaskType is your Response class
+        static func getTimeline() -> TaskType< Any, ErrorType> {
             
-            let task: TaskType = TaskType { success, failure in
+            // Switching the router
+            router = .status
+            
+            let task = TaskType { success, failure in
                 
                 Alamofire.request(.POST, path)
                     .responseJSON(completionHandler: { response in
@@ -113,15 +116,22 @@ extension API {
 
 After that you can use it like this.
 
-```
+```swift
 
 API.Twitter.getTimeline()
         
+        // It will retry the API request if that is timeout or failed.
+        .retry(max: 3)
+        
+        // Specify the interval time of retry.
+        .interval(milliseconds: 500)
+        
+        // If the response is valid, This will be called.
         .success { response in
 
             /*
             * You can use `response` without nil checking.
-            * The type of `response` is automatically inferred to your Model class.
+            * The type of `response` is automatically inferred to your Response class.
             * e.g. your Model class is `Timeline`
             */
             
@@ -130,6 +140,7 @@ API.Twitter.getTimeline()
             
         }
         
+        // If the response is INVALID, This will be called.
         .failure { error in
 
             // Check the reason of error
@@ -138,16 +149,6 @@ API.Twitter.getTimeline()
         }
 
 ```
-
-## TODO
-
-`Retry`
-
-`Progress`
-
-`Cancel`
-
-`Delay`
 
 ## Requirements
 

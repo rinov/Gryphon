@@ -17,11 +17,14 @@ public final class Task<Response,Error> {
     // Cancel handler type.
     public typealias Cancel = Void -> Void
     
-    // Validation handler type.
-    public typealias Validate = Any? -> Bool
-    
     // Initializer must declare both fullfill and reject cases.
     public typealias Initializer = (_: Fulfill, _: Reject) -> Void
+
+    // The default value of maximum retry count.
+    private let maximumRetryCount: Int = 10
+    
+    // The default value of maximum interval time(ms).
+    private let maximumIntervalTime: Double = 10000.0
     
     // Fullfil handler.
     private var fulfill: Fulfill?
@@ -31,9 +34,6 @@ public final class Task<Response,Error> {
 
     // Cancel handler.
     private var cancel: Cancel?
-    
-    // Validation handler.
-    private var validate: Validate?
     
     // Initializer handler.
     private var initializer: Initializer?
@@ -71,16 +71,6 @@ public final class Task<Response,Error> {
         
     }
     
-    // The validate function for response from your request.
-    public func validate(validater handler: Validate) -> Self {
-        
-        validate = handler
-        
-        return self
-        
-    }
-
-    
     // The maximum number of retry.
     public func retry(max times: Int) -> Self {
         
@@ -103,39 +93,56 @@ public final class Task<Response,Error> {
     public init(initClosuer: Initializer ) {
         
         initializer = initClosuer
-        
-        initClosuer({ response in
 
-            self.fulfill?(response)
-            
-        }) { error in
-            
-            self.reject?(error)
-
-            self.doRetry()
-            
-        }
+        executeRequest()
         
     }
     
+    // MARK: Private Methods
+
+    private func executeRequest() {
+        
+        initializer?({ response in
+            
+            self.fulfill?(response)
+            
+        }){ error in
+            
+            self.reject?(error)
+            
+            self.doRetry()
+        }
+
+    }
+    
+    // If `retry` count is one or more.
+    
     private func doRetry() {
+
+        if retry > maximumRetryCount {
+            
+            return fatalError("The retry count is too many.\nPlease check it again.")
+            
+        }
         
         if retry > 0 {
             
             retry -= 1
 
-            print("retry:\(retry)")
-            
-            initializer?({ response in
+            if interval > maximumIntervalTime {
                 
-                self.fulfill?(response)
-            
-            }){ error in
+                return fatalError("the interval time is too much.\nPlease check it again.")
                 
-                self.reject?(error)
-            
-                self.doRetry()
             }
+            
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64( interval / 1000 * Double(NSEC_PER_SEC)))
+
+            dispatch_after(delayTime, dispatch_get_main_queue()) { 
+
+                self.executeRequest()
+
+            }
+
             
         }
 

@@ -68,6 +68,8 @@ public final class Query {
         
     }
     
+    // MARK: Private Methods
+    
     private func joinElements() -> String {
         
         let valueSeparator = "="

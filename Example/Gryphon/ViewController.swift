@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         API.Twitter.getTimeline()
-            .retry(max: 5)
-            .interval(milliseconds: 300)
+            .retry(max: 11)
+            .interval(milliseconds: 500)
         
             .success { response in
 

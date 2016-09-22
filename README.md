@@ -2,8 +2,8 @@
 
 [![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
-[![Platform](https://img.shields.io/badge/platform-iOS-brightgreen.svg)](https://img.shields.io/badge/platform-iOS-brightgreen.svg)
-[![Language](https://img.shields.io/badge/Language-Swift-blue.svg)](https://img.shields.io/badge/Language-Swift-blue.svg)
+[![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
+[![Language](https://img.shields.io/badge/Language-Swift2.3-blue.svg)](https://img.shields.io/badge/Language-Swift2.3-blue.svg)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)
 
 Gryphon is a REST API kit that's type safe and convenient for Swift :yum:
@@ -152,7 +152,7 @@ API.Twitter.getTimeline()
 
 ## Requirements
 
-Swift2.2+
+Swift2.2, Swift2.3
 
 iOS8+
 
@@ -161,14 +161,19 @@ iOS8+
 In your Podfile:
 
 ```ruby
-pod "Gryphon"
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+  pod 'Gryphon'
+end
+
 ```
 and
 
-`pod install`
+`$ pod install`
 
 ## License
 
-MIT
+`Gryphon` is released under the MIT license.
 
 https://github.com/rinov/Gryphon/blob/master/LICENSE

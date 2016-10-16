@@ -13,24 +13,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Example
+        // Example for GET method
         
-        API.Twitter.getTimeline()
+        API.Messages.getMessage()
             .retry(max: 5)
             .interval(milliseconds: 1000)
         
             .success { response in
 
-                print("success")
+                print("GET success!")
+                print("Message=\(response.result)")
                 
             }
             
             .failure { error in
 
-                print("error")
+                print("GET Error!")
                 
             }
         
+        // Example for POST method
+        
+        API.Messages.postMessage()
+
+            .success { response in
+                
+                print("POST success!")
+                print("Status code=\(response)")
+                
+            }
+            
+            .failure { error in
+                
+                print("POST Error!")
+                
+            }
         
     }
     

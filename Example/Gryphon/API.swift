@@ -22,25 +22,13 @@ final class API {
 
 extension API {
     
-    final class Twitter: Requestable {
+    final class Messages: Requestable {
         
-        enum Router: String {
-            
-            case timeline = "user_timeline.json"
-            
-            case follow = "follow.json"
-            
-            case follower = "follower.json"
-            
-        }
-        
-        static var router: Router = .timeline
-
         // required `Requestable`
         
         static var baseURL: String {
             
-            return "https://api.twitter.com/1.1/statuses/"
+            return "http://rinov.jp/"
             
         }
 
@@ -48,30 +36,28 @@ extension API {
 
         static var path: String {
             
-            return baseURL + router.rawValue
+            return baseURL + "Gryphon-Tutorial.php"
             
         }
         
-        // `Task type` = Task<YourResponseClass,ErrorType>
-        
-        typealias TaskType = Task<Any,ErrorType>
-        
-        class func getTimeline() -> TaskType {
+        // Returns Message class
+        class func getMessage() -> Task<Message, ErrorType> {
             
-            let task = TaskType { success, failure in
+            let task = Task<Message, ErrorType> { success, failure in
                 
-                Alamofire.request(.POST, path)
+                Alamofire.request(.GET, path)
                     .responseJSON(completionHandler: { response in
 
-                        print(response.result.value)
-                        
-                        // Object mapping in your favorite way
+                        // Object mapping in your favorite way.
+                        let result = response.result.value![0]["result"] as! String
 
-                        let yourOwnCheck = false
+                        let yourOwnCheck = true
                         
                         if yourOwnCheck {
                             
-                            success(response)
+                            let message = Message(message: result)
+
+                            success(message)
                             
                         }else{
                             
@@ -87,7 +73,38 @@ extension API {
             return task
             
         }
-
+        
+        // Returns status code
+        class func postMessage() -> Task<Int, ErrorType> {
+            
+            let task = Task<Int, ErrorType> { success, failure in
+                
+                Alamofire.request(.POST, path)
+                    .responseJSON(completionHandler: { response in
+                        
+                        // Object mapping in your favorite way
+                        
+                        let yourOwnCheck = true
+                        
+                        if yourOwnCheck {
+                            
+                            success(response.response?.statusCode ?? 0)
+                            
+                        }else{
+                            
+                            failure(ResponseError.unexceptedResponse(response.description))
+                            
+                        }
+                        
+                        
+                    })
+                
+            }
+            
+            return task
+            
+        }
+        
     }
 
 }

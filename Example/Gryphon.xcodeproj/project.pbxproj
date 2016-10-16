@@ -16,8 +16,6 @@
 		72F8A1BA1D8D297700883B73 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F8A1B91D8D297700883B73 /* API.swift */; };
 		72F8A1BD1D8D2CB100883B73 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */; };
 		72F8A1BE1D8D2CB100883B73 /* Gryphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */; };
-		DF63E4484990BA5883D4FA23 /* Pods_Gryphon_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */; };
-		E4BD5B7CC9ED7A7DAE6C2198 /* Pods_Gryphon_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +44,9 @@
 		72F8A1B91D8D297700883B73 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gryphon.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gryphon-ghutwqkhrrpcapemdzerntgssqfj/Build/Products/Debug-iphonesimulator/Gryphon/Gryphon.framework"; sourceTree = "<group>"; };
-		7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804D3EF1807FF3189FA843DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8B06993FFCCA6FAAE646A398 /* Pods-Gryphon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gryphon_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gryphon_Example/Pods-Gryphon_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CDAE796CF6672E07609A4D /* Pods-Gryphon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gryphon_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gryphon_Tests/Pods-Gryphon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9579FE036A177C7C5F002D3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FD26155DE9BCE8B3922A8ECC /* Pods-Gryphon_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gryphon_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gryphon_Tests/Pods-Gryphon_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +58,6 @@
 			files = (
 				72F8A1BD1D8D2CB100883B73 /* Alamofire.framework in Frameworks */,
 				72F8A1BE1D8D2CB100883B73 /* Gryphon.framework in Frameworks */,
-				E4BD5B7CC9ED7A7DAE6C2198 /* Pods_Gryphon_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF63E4484990BA5883D4FA23 /* Pods_Gryphon_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +147,6 @@
 			children = (
 				72F8A1BB1D8D2CB100883B73 /* Alamofire.framework */,
 				72F8A1BC1D8D2CB100883B73 /* Gryphon.framework */,
-				7E2CF8C777AD63C86E9BB85E /* Pods_Gryphon_Example.framework */,
-				C8B0A4F6F538143491350AE4 /* Pods_Gryphon_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,9 +218,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -501,11 +495,16 @@
 			baseConfigurationReference = 8B06993FFCCA6FAAE646A398 /* Pods-Gryphon_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Gryphon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -514,11 +513,16 @@
 			baseConfigurationReference = 3165F8EE9CDD9A457F308B6F /* Pods-Gryphon_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Gryphon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -538,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -553,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

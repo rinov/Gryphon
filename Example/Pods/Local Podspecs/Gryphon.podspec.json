@@ -1,6 +1,6 @@
 {
   "name": "Gryphon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "Type safe and useful API kit.",
   "description": "Gryphon is an HTTP client kit that's type safe and convenient.",
   "homepage": "https://github.com/rinov/Gryphon",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rinov/Gryphon.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "8.0"

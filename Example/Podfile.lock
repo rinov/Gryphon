@@ -1,25 +1,19 @@
 PODS:
-  - Alamofire (3.5.0)
-  - Gryphon (1.0.0)
-  - Nimble (3.2.0)
-  - Quick (0.9.3)
+  - Alamofire (3.5.1)
+  - Gryphon (1.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - Gryphon (from `../`)
-  - Nimble (~> 3.0)
-  - Quick (~> 0.8)
 
 EXTERNAL SOURCES:
   Gryphon:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
-  Gryphon: 437bf38a6b327fd32388069096397d92c013f4f6
-  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  Gryphon: 3cb02563d95054c45ac4d7a8d3e828646ed0050d
 
-PODFILE CHECKSUM: 0517237e8cc93e7ccc6d4698bbe9c31c69fdad1b
+PODFILE CHECKSUM: 469aff19c1e2234709eab7da9c819514048a1520
 
 COCOAPODS: 1.0.1

@@ -121,7 +121,7 @@ public final class Task<Response,Error> {
 
         if retry > maximumRetryCount {
             
-            fatalError("The retry count is too many.\nPlease check it again.")
+            fatalError("The retry count is too many.\nPlease check the retry count again.")
             
         }
         
@@ -131,11 +131,11 @@ public final class Task<Response,Error> {
 
             if interval > maximumIntervalTime {
                 
-                fatalError("the interval time is too much.\nPlease check it again.")
+                fatalError("The interval time is too much.\nPlease check the interval time again.")
                 
             }
             
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64( interval / 1000 * Double(NSEC_PER_SEC)))
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64( interval / 1000.0 * Double(NSEC_PER_SEC)))
 
             dispatch_after(delayTime, dispatch_get_main_queue()) { 
 

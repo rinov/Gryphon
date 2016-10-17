@@ -1,12 +1,12 @@
-# Gryphon (REST API kit for Swift)
+# Gryphon (REST API kit for Swift2.3+)
 
 [![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
-[![Language](https://img.shields.io/badge/Language-Swift2.3-blue.svg)](https://img.shields.io/badge/Language-Swift2.3-blue.svg)
+[![Language](https://img.shields.io/badge/Language-Swift%203.0%20and%202.3%20are%20compatible-blue.svg)](https://img.shields.io/badge/Language-Swift%203.0%20and%202.3%20are%20compatible-blue.svg)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)
 
-Gryphon is a REST API kit that's type safe and convenient for Swift :yum:
+Gryphon is a REST API kit that's type safe and convenient for Swift2.3+ :yum:
 
 [![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
 
@@ -27,7 +27,29 @@ API.Endpoint.request()
 ```
 
 
-### How to use this?:eyes: (Example for retrieving from Twitter API)
+### How to use this?:eyes: (Example for retrieving a message)
+
+Example of endpoint:
+
+Sending request to `http://rinov.jp/Gryphon-Tutorial` by `GET` will return
+
+```json
+[
+    {
+        "result": "Hello World!"
+    }
+]
+```
+
+Sending request to `http://rinov.jp/Gryphon-Tutorial` by `POST` will return
+
+```json
+[
+    {
+        "result": "Sent a message"
+    }
+]
+```
 
 First of all, Create an API class.
 
@@ -45,58 +67,51 @@ final class API {
 
 Next step , Implement your request in compliance with `Requestable` protocol.
 
-e.g. using `Alamofire`
+e.g. Using [Alamofire](https://github.com/Alamofire/Alamofire) with swift3.0.
 
 ```swift
 
 extension API {
 
-    final class Twitter: Requestable {
-
-        enum Router: String {
+  final class Messages: Requestable {
         
-            case status = "/status/"
-            // ... and so on
-            
-        }
-        
-        var router: Router = .status
-            
         // required `Requestable`
         static var baseURL: String {
             
-            return "https://api.twitter.com/1.1/statuses/"
+            return "http://rinov.jp/"
             
         }
 
         // required `Requestable`
         static var path: String {
             
-            return baseURL + router.rawValue
+            return baseURL + "Gryphon-Tutorial.php"
             
         }
         
-        // `Any` in TaskType is your Response class.
-        static func getTimeline() -> TaskType< Any, ErrorType> {
+        // Returns Message class
+        class func getMessage() -> Task<Message, Error> {
             
-            // Switching the router
-            router = .status
-            
-            let task = TaskType { success, failure in
+            let task = Task<Message, Error> { success, failure in
                 
-                Alamofire.request(.POST, path)
+                Alamofire.request(path, method: .get, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
 
                         // Object mapping in your favorite way.
+                        let result = (response.result.value as! [AnyObject])[0]["result"] as! String
 
-                        // If the mapping is succeed.
+                        let yourOwnCheck = true
+                        
                         if yourOwnCheck {
                             
-                            success(response)
+                            let message = Message(message: result)
+
+                            success(message)
                             
                         }else{
                             
-                            failure(ResponseError.unexceptedResponse("Cause(String) or AnyObject is available."))
+                            let reason = response.result.description as AnyObject
+                            failure(ResponseError.unexceptedResponse(reason))
                             
                         }
                         
@@ -108,7 +123,36 @@ extension API {
             
         }
         
-    }
+        // Returns status code
+        class func postMessage() -> Task<Int, Error> {
+            
+            let task = Task<Int, Error> { success, failure in
+
+                Alamofire.request(path, method: .post, encoding: JSONEncoding.default)
+                    .responseJSON(completionHandler: { response in
+                     
+                        let yourOwnCheck = true
+                        
+                        if yourOwnCheck {
+                            
+                            success(response.response?.statusCode ?? 0)
+                            
+                        }else{
+                            
+                            let reason = response.result.description as AnyObject
+                            failure(ResponseError.unexceptedResponse(reason))
+                            
+                        }
+                        
+                    })
+                
+            }
+            
+            return task
+            
+        }
+        
+   }
     
 }
 
@@ -118,7 +162,7 @@ After that you can use it like this.
 
 ```swift
 
-API.Twitter.getTimeline()
+API.Messages.getMessage()
         
         // It will retry the API request if that is timeout or failed.
         .retry(max: 3)
@@ -135,12 +179,12 @@ API.Twitter.getTimeline()
             * e.g. your Model class is `Timeline`
             */
             
-            let timeline: Timeline = response // This is ok because response is NOT optional type
-            print(response.count) // this is ok because response have already object mapping
+            let message: Message = response // This is ok because response is NOT optional type
+            print(response.result) // This is ok because response have already object mapping
             
         }
         
-        // If the response is INVALID, This will be called.
+        // If the response is **INVALID**, This will be called.
         .failure { error in
 
             // Check the reason of error
@@ -152,25 +196,44 @@ API.Twitter.getTimeline()
 
 ## Requirements
 
-Swift2.2, Swift2.3
-
-iOS8+
+Swift2.3(iOS8+) or Swift3.0(iOS9+)
 
 ## Installation
+
+## Swift2.3
 
 In your Podfile:
 
 ```ruby
+platform :ios,'8.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-  pod 'Gryphon'
+  pod 'Gryphon', '~> 1.0'
 end
 
 ```
 and
 
 `$ pod install`
+
+## Swift3.0
+
+In your Podfile:
+
+```ruby
+platform :ios,'10.0'
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+  pod 'Gryphon', '~> 2.0'
+end
+
+```
+and
+
+`$ pod install`
+> CocoaPods 1.1.0+ is required to build Gryphon 2.0.0+.
 
 ## License
 

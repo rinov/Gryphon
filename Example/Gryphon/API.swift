@@ -41,15 +41,15 @@ extension API {
         }
         
         // Returns Message class
-        class func getMessage() -> Task<Message, ErrorType> {
+        class func getMessage() -> Task<Message, Error> {
             
-            let task = Task<Message, ErrorType> { success, failure in
+            let task = Task<Message, Error> { success, failure in
                 
-                Alamofire.request(.GET, path)
+                Alamofire.request(path, method: .get, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
 
                         // Object mapping in your favorite way.
-                        let result = response.result.value![0]["result"] as! String
+                        let result = (response.result.value as! [AnyObject])[0]["result"] as! String
 
                         let yourOwnCheck = true
                         
@@ -61,7 +61,8 @@ extension API {
                             
                         }else{
                             
-                            failure(ResponseError.unexceptedResponse(response.description))
+                            let reason = response.result.description as AnyObject
+                            failure(ResponseError.unexceptedResponse(reason))
                             
                         }
                         
@@ -75,11 +76,11 @@ extension API {
         }
         
         // Returns status code
-        class func postMessage() -> Task<Int, ErrorType> {
+        class func postMessage() -> Task<Int, Error> {
             
-            let task = Task<Int, ErrorType> { success, failure in
-                
-                Alamofire.request(.POST, path)
+            let task = Task<Int, Error> { success, failure in
+
+                Alamofire.request(path, method: .post, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
                         
                         // Object mapping in your favorite way
@@ -92,7 +93,8 @@ extension API {
                             
                         }else{
                             
-                            failure(ResponseError.unexceptedResponse(response.description))
+                            let reason = response.result.description as AnyObject
+                            failure(ResponseError.unexceptedResponse(reason))
                             
                         }
                         

@@ -11,7 +11,7 @@ import Foundation
 // Example for response model of Messages API
 final class Message {
     
-    var result: String!
+    var result: String
     
     init() {
         fatalError()

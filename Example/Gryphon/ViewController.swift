@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Example for GET method
-        
-        API.Messages.getMessage()
+
+        _ = API.Messages.getMessage()
             .retry(max: 5)
             .interval(milliseconds: 1000)
         
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
                 print("Message=\(response.result)")
                 
             }
-            
+
             .failure { error in
 
                 print("GET Error!")
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         // Example for POST method
         
-        API.Messages.postMessage()
+        _ = API.Messages.postMessage()
 
             .success { response in
                 

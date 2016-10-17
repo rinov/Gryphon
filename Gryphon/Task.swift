@@ -9,43 +9,43 @@ import Foundation
 public final class Task<Response,Error> {
 
     // Success handler type.
-    public typealias Fulfill = Response -> Void
+    public typealias Fulfill = (Response) -> Void
 
     // Failure handler type.
-    public typealias Reject = Error -> Void
+    public typealias Reject = (Error) -> Void
     
     // Cancel handler type.
-    public typealias Cancel = Void -> Void
+    public typealias Cancel = (Void) -> Void
     
     // Initializer must declare both fullfill and reject cases.
-    public typealias Initializer = (_: Fulfill, _: Reject) -> Void
+    public typealias Initializer = (_: @escaping Fulfill, _: @escaping Reject) -> Void
 
     // The default value of maximum retry count.
-    private let maximumRetryCount: Int = 10
+    fileprivate let maximumRetryCount: Int = 10
     
     // The default value of maximum interval time(ms).
-    private let maximumIntervalTime: Double = 10000.0
+    fileprivate let maximumIntervalTime: Double = 10000.0
     
     // Fullfil handler.
-    private var fulfill: Fulfill?
+    fileprivate var fulfill: Fulfill?
     
     // Reject handler.
-    private var reject: Reject?
+    fileprivate var reject: Reject?
 
     // Cancel handler.
-    private var cancel: Cancel?
+    fileprivate var cancel: Cancel?
     
     // Initializer handler.
-    private var initializer: Initializer?
+    fileprivate var initializer: Initializer?
 
     // Retry count
-    private lazy var retry: Int = 0
+    fileprivate lazy var retry: Int = 0
 
     // Interval time of request
-    private lazy var interval: Double = 0.0
+    fileprivate lazy var interval: Double = 0.0
     
     // In case of succeed, It is able to process the result of response.
-    public func success(response handler: Fulfill) -> Self {
+    public func success(response handler: @escaping Fulfill) -> Self {
         
         fulfill = handler
         
@@ -54,7 +54,7 @@ public final class Task<Response,Error> {
     }
     
     // In case of failure, It will be able to process the error by reason.
-    public func failure(error handler: Reject) -> Self {
+    public func failure(error handler: @escaping Reject) -> Self {
         
         reject = handler
         
@@ -63,7 +63,7 @@ public final class Task<Response,Error> {
     }
     
     // If the request was rejected by your `validate`, It will be able to perform to your cancel at last.
-    public func cancel(canceler handler: Cancel) -> Self {
+    public func cancel(canceler handler: @escaping Cancel) -> Self {
         
         cancel = handler
         
@@ -90,7 +90,7 @@ public final class Task<Response,Error> {
     }
     
     // Initializing by closure of `initializar`.
-    public init(initClosuer: Initializer ) {
+    public init(initClosuer: @escaping Initializer ) {
         
         initializer = initClosuer
 
@@ -100,7 +100,7 @@ public final class Task<Response,Error> {
     
     // MARK: Private Methods
 
-    private func executeRequest() {
+    fileprivate func executeRequest() {
         
         initializer?({ response in
             
@@ -117,7 +117,7 @@ public final class Task<Response,Error> {
     
     // If `retry` count is one or more.
     
-    private func doRetry() {
+    fileprivate func doRetry() {
 
         if retry > maximumRetryCount {
             
@@ -135,9 +135,9 @@ public final class Task<Response,Error> {
                 
             }
             
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64( interval / 1000.0 * Double(NSEC_PER_SEC)))
+            let delayTime = DispatchTime.now() + Double(Int64( interval / 1000.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
 
-            dispatch_after(delayTime, dispatch_get_main_queue()) { 
+            DispatchQueue.main.asyncAfter(deadline: delayTime) { 
 
                 self.executeRequest()
 

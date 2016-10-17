@@ -7,15 +7,15 @@
 import Foundation
 
 // ConnectionError represents an error that occurs while processing for a request.
-public enum ConnectionError: ErrorType {
+public enum ConnectionError: Error {
     
     // RequestError represents that occurs an error while sending a request.
-    case requestError(ErrorType)
+    case requestError(Error)
     
     // ResponseError represents that occurs an error while getting a result of request.
-    case responseError(ErrorType)
+    case responseError(Error)
     
     // Error of connection.
-    case connectionError(ErrorType)
+    case connectionError(Error)
     
 }

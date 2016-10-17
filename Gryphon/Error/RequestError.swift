@@ -7,7 +7,7 @@
 import Foundation
 
 // RequestError presents an error that occurs while sending a request.
-public enum RequestError: ErrorType {
+public enum RequestError: Error {
     
     // If the request doesn't conform to RequestType appropriately.
     case unacceptableFormat(String)

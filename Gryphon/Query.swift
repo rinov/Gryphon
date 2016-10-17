@@ -35,15 +35,15 @@ public final class Query {
     //URL format query with BASE64 encoding.
     var absoluteStringWithBase64: String {
         
-        let body = absoluteString.dataUsingEncoding(NSUTF8StringEncoding)
+        let body = absoluteString.data(using: String.Encoding.utf8)
 
-        let base64Str = body!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        let base64Str = body!.base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters)
         
         return base64Str
         
     }
     
-    func append(key: String, value: AnyObject) -> Self {
+    func append(_ key: String, value: AnyObject) -> Self {
         
         queries[key] = value
         
@@ -51,7 +51,7 @@ public final class Query {
         
     }
     
-    func append(key: String, value: AnyObject?) -> Self {
+    func append(_ key: String, value: AnyObject?) -> Self {
 
         guard let value = value else { return self }
         
@@ -60,7 +60,7 @@ public final class Query {
         return self
     }
     
-    func hasKey(key: String) -> Bool {
+    func hasKey(_ key: String) -> Bool {
         
         guard let _ = queries[key] else { return false }
         
@@ -70,7 +70,7 @@ public final class Query {
     
     // MARK: Private Methods
     
-    private func joinElements() -> String {
+    fileprivate func joinElements() -> String {
         
         let valueSeparator = "="
         
@@ -83,7 +83,7 @@ public final class Query {
             absoluteQuery += querySeparator
             absoluteQuery += key
             absoluteQuery += valueSeparator
-            absoluteQuery += String(value)
+            absoluteQuery += String(describing: value)
             
         }
         

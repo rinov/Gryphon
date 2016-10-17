@@ -7,7 +7,7 @@
 import Foundation
 
 // ResponseError represents an erro that occurs while getting a response object.
-public enum ResponseError: ErrorType {
+public enum ResponseError: Error {
 
     // If the status code isn't in 200 ... 299.
     case unacceptableStatusCode(Int)

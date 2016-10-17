@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.5.1)
-  - Gryphon (1.0.1)
+  - Gryphon (1.0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
-  Gryphon: 3cb02563d95054c45ac4d7a8d3e828646ed0050d
+  Gryphon: 1770d7ee89b9ede13243ab3a09d9ba051f09f891
 
 PODFILE CHECKSUM: 469aff19c1e2234709eab7da9c819514048a1520
 

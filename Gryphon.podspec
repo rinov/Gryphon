@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Ryo Ishikawa' => 'rinov@rinov.jp' }
   s.source           = { :git => 'https://github.com/rinov/Gryphon.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.3'
   s.source_files = 'Gryphon/**/*'
 
 end

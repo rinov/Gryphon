@@ -176,7 +176,7 @@ API.Messages.getMessage()
             /*
             * You can use `response` without nil checking.
             * The type of `response` is automatically inferred to your Response class.
-            * e.g. your Model class is `Timeline`
+            * e.g. your Model class is `Message`
             */
             
             let message: Message = response // This is ok because response is NOT optional type

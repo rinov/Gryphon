@@ -75,21 +75,20 @@ extension API {
 
   final class Messages: Requestable {
         
-        // required `Requestable`
+        // required `Requestable`.
         static var baseURL: String {
             
             return "http://rinov.jp/"
             
         }
 
-        // required `Requestable`
+        // required `Requestable`.
         static var path: String {
             
             return baseURL + "Gryphon-Tutorial.php"
             
         }
         
-        // Returns Message class
         class func getMessage() -> Task<Message, Error> {
             
             let task = Task<Message, Error> { success, failure in
@@ -123,7 +122,6 @@ extension API {
             
         }
         
-        // Returns status code
         class func postMessage() -> Task<Int, Error> {
             
             let task = Task<Int, Error> { success, failure in
@@ -164,7 +162,7 @@ After that you can use it like this.
 
 API.Messages.getMessage()
         
-        // It will retry the API request if that is timeout or failed.
+        // It will retry the request if that is timeout or failed.
         .retry(max: 3)
         
         // Specify the interval time of retry.
@@ -179,15 +177,15 @@ API.Messages.getMessage()
             * e.g. your Model class is `Message`
             */
             
-            let message: Message = response // This is ok because response is NOT optional type
-            print(response.result) // This is ok because response have already object mapping
+            let message: Message = response // This is ok because response is NOT optional type.
+            print(response.result) // This is ok because response has already object mapping.
             
         }
         
-        // If the response is **INVALID**, This will be called.
+        // If the response is INVALID, this will be called.
         .failure { error in
 
-            // Check the reason of error
+            // Check the reason of error.
             print(error)
             
         }

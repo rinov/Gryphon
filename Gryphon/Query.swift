@@ -6,34 +6,33 @@
 
 import Foundation
 
-// Serves query making which consisting of multiple query.
-
 public final class Query {
     
-    var isEmpty: Bool {
+    public init() {}
+    
+    public var isEmpty: Bool {
 
         return queries.isEmpty
         
     }
     
-    var count: Int {
+    public var count: Int {
         
         return queries.count
         
     }
 
-    //Key : Value dictionary.
-    var queries: [String: AnyObject] = [:]
+    public var queries: [String: AnyObject] = [:]
     
-    //URL format query.
-    var absoluteString: String {
+    // Returns an URL format query.
+    public var absoluteString: String {
 
         return joinElements()
     
     }
     
-    //URL format query with BASE64 encoding.
-    var absoluteStringWithBase64: String {
+    // Returns an URL format query with Base64 encoding.
+    public var absoluteStringWithBase64: String {
         
         let body = absoluteString.data(using: String.Encoding.utf8)
 
@@ -43,7 +42,7 @@ public final class Query {
         
     }
     
-    func append(_ key: String, value: AnyObject) -> Self {
+    public func append(_ key: String, value: AnyObject) -> Self {
         
         queries[key] = value
         
@@ -51,7 +50,7 @@ public final class Query {
         
     }
     
-    func append(_ key: String, value: AnyObject?) -> Self {
+    public func append(_ key: String, value: AnyObject?) -> Self {
 
         guard let value = value else { return self }
         
@@ -60,7 +59,7 @@ public final class Query {
         return self
     }
     
-    func hasKey(_ key: String) -> Bool {
+    public func hasKey(_ key: String) -> Bool {
         
         guard let _ = queries[key] else { return false }
         
@@ -78,16 +77,11 @@ public final class Query {
         
         var absoluteQuery = ""
         
-        for (key,value) in queries {
+        return queries.reduce(absoluteQuery) { query, queries in
             
-            absoluteQuery += querySeparator
-            absoluteQuery += key
-            absoluteQuery += valueSeparator
-            absoluteQuery += String(describing: value)
-            
-        }
+            query + querySeparator + queries.0 + valueSeparator + String(describing: queries.1)
         
-        return absoluteQuery
+        }
 
     }
     

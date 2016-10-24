@@ -75,9 +75,7 @@ public final class Query {
         
         let querySeparator = "&"
         
-        var absoluteQuery = ""
-        
-        return queries.reduce(absoluteQuery) { query, queries in
+        return queries.reduce("") { query, queries in
             
             query + querySeparator + queries.0 + valueSeparator + String(describing: queries.1)
         

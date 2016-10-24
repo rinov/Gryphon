@@ -6,34 +6,31 @@
 
 import Foundation
 
-// Serves query making which consisting of multiple query.
-
 public final class Query {
     
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
 
         return queries.isEmpty
         
     }
     
-    var count: Int {
+    public var count: Int {
         
         return queries.count
         
     }
 
-    //Key : Value dictionary.
-    var queries: [String: AnyObject] = [:]
+    public var queries: [String: AnyObject] = [:]
     
-    //URL format query.
-    var absoluteString: String {
+    // URL format query.
+    public var absoluteString: String {
 
         return joinElements()
     
     }
     
-    //URL format query with BASE64 encoding.
-    var absoluteStringWithBase64: String {
+    // URL format query with Base64 encoding.
+    public var absoluteStringWithBase64: String {
         
         let body = absoluteString.dataUsingEncoding(NSUTF8StringEncoding)
 
@@ -43,7 +40,7 @@ public final class Query {
         
     }
     
-    func append(key: String, value: AnyObject) -> Self {
+    public func append(key: String, value: AnyObject) -> Self {
         
         queries[key] = value
         
@@ -51,7 +48,7 @@ public final class Query {
         
     }
     
-    func append(key: String, value: AnyObject?) -> Self {
+    public func append(key: String, value: AnyObject?) -> Self {
 
         guard let value = value else { return self }
         
@@ -60,7 +57,7 @@ public final class Query {
         return self
     }
     
-    func hasKey(key: String) -> Bool {
+    public func hasKey(key: String) -> Bool {
         
         guard let _ = queries[key] else { return false }
         
@@ -76,9 +73,7 @@ public final class Query {
         
         let querySeparator = "&"
         
-        let absoluteQuery = ""
-        
-        return queries.reduce(absoluteQuery) { query, queries in
+        return queries.reduce("") { query, queries in
             query + querySeparator + queries.0 + valueSeparator + String(queries.1)
         }
     }

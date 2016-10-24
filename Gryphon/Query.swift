@@ -76,19 +76,11 @@ public final class Query {
         
         let querySeparator = "&"
         
-        var absoluteQuery = ""
+        let absoluteQuery = ""
         
-        for (key,value) in queries {
-            
-            absoluteQuery += querySeparator
-            absoluteQuery += key
-            absoluteQuery += valueSeparator
-            absoluteQuery += String(value)
-            
+        return queries.reduce(absoluteQuery) { query, queries in
+            query + querySeparator + queries.0 + valueSeparator + String(queries.1)
         }
-        
-        return absoluteQuery
-
     }
     
 }

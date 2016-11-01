@@ -207,7 +207,7 @@ platform :ios,'8.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-  pod 'Gryphon', '~> 1.0'
+  pod 'Gryphon', '~> 1.0.5'
 end
 
 ```
@@ -226,7 +226,7 @@ platform :ios,'10.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-  pod 'Gryphon', '~> 2.0'
+  pod 'Gryphon', '~> 2.0.3'
 end
 
 ```

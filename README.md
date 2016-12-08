@@ -152,7 +152,7 @@ API.Twitter.getTimeline()
 
 ## Requirements
 
-Swift2.2, Swift2.3
+Swift3.0
 
 iOS8+
 

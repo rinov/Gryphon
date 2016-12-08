@@ -43,15 +43,71 @@ public final class Query {
     }
     
     @discardableResult
-    public func append<T: Hashable>(_ key: String, value: T?) -> Self {
+    public func append(_ key: String, value: String?) -> Self {
         
-        guard let object = value as? AnyObject else { return self }
+        guard let value = value else { return self }
         
-        queries[key] = object
+        queries[key] = value as AnyObject
         
         return self
+        
     }
     
+    @discardableResult
+    public func append(_ key: String, value: Int?) -> Self {
+        
+        guard let value = value else { return self }
+        
+        queries[key] = value as AnyObject
+        
+        return self
+        
+    }
+
+    @discardableResult
+    public func append(_ key: String, value: Double?) -> Self {
+        
+        guard let value = value else { return self }
+        
+        queries[key] = value as AnyObject
+        
+        return self
+        
+    }
+    
+    @discardableResult
+    public func append(_ key: String, value: Float?) -> Self {
+        
+        guard let value = value else { return self }
+        
+        queries[key] = value as AnyObject
+        
+        return self
+        
+    }
+    
+    @discardableResult
+    public func append(_ key: String, value: CGFloat?) -> Self {
+        
+        guard let value = value else { return self }
+        
+        queries[key] = value as AnyObject
+        
+        return self
+        
+    }
+    
+    @discardableResult
+    public func append(_ key: String, value: Bool?) -> Self {
+        
+        guard let value = value else { return self }
+        
+        queries[key] = value as AnyObject
+        
+        return self
+        
+    }
+
     public func hasKey(_ key: String) -> Bool {
         
         guard let _ = queries[key] else { return false }

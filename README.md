@@ -59,7 +59,7 @@ e.g.
 
 final class API {
     
-    ....
+    static let url = "http://rinov.jp/"
     
 }
 
@@ -78,7 +78,7 @@ extension API {
         // required `Requestable`.
         static var baseURL: String {
             
-            return "http://rinov.jp/"
+            return API.url
             
         }
 
@@ -109,8 +109,7 @@ extension API {
                             
                         }else{
                             
-                            let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
+                            failure(ResponseError.unexceptedResponse(response.result.description))
                             
                         }
                         
@@ -133,12 +132,11 @@ extension API {
                         
                         if yourOwnCheck {
                             
-                            success(response.response?.statusCode ?? 0)
+                            success(response.response!.statusCode)
                             
                         }else{
                             
-                            let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
+                            failure(ResponseError.unexceptedResponse(response.result.description))
                             
                         }
                         
@@ -198,6 +196,24 @@ Swift2.3(iOS8+) or Swift3.0(iOS9+)
 
 ## Installation
 
+## Swift3.0
+
+In your Podfile:
+
+```ruby
+platform :ios,'10.0'
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+  pod 'Gryphon', '~> 2.0.4'
+end
+
+```
+and
+
+`$ pod install`
+> CocoaPods 1.1.0+ is required to build Gryphon 2.0.0+.
+
 ## Swift2.3
 
 In your Podfile:
@@ -216,24 +232,6 @@ and
 `$ pod install`
 
 In case of `XCode8+`, Make `Use Legacy Swift Language Version` to `YES` in Build settings.
-
-## Swift3.0
-
-In your Podfile:
-
-```ruby
-platform :ios,'10.0'
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-  pod 'Gryphon', '~> 2.0.3'
-end
-
-```
-and
-
-`$ pod install`
-> CocoaPods 1.1.0+ is required to build Gryphon 2.0.0+.
 
 ## License
 

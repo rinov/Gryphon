@@ -45,6 +45,7 @@ public final class Task<Response,Error> {
     fileprivate lazy var interval: Double = 0.0
     
     // In case of succeed, It is able to process the result of response.
+    @discardableResult
     public func success(response handler: @escaping Fulfill) -> Self {
         
         fulfill = handler
@@ -54,6 +55,7 @@ public final class Task<Response,Error> {
     }
     
     // In case of failure, It will be able to process the error by reason.
+    @discardableResult
     public func failure(error handler: @escaping Reject) -> Self {
         
         reject = handler
@@ -63,6 +65,7 @@ public final class Task<Response,Error> {
     }
     
     // If the request was rejected by your `validate`, It will be able to perform to your cancel at last.
+    @discardableResult
     public func cancel(canceler handler: @escaping Cancel) -> Self {
         
         cancel = handler
@@ -72,6 +75,7 @@ public final class Task<Response,Error> {
     }
     
     // The maximum number of retry.
+    @discardableResult
     public func retry(max times: Int) -> Self {
         
         retry = times
@@ -81,6 +85,7 @@ public final class Task<Response,Error> {
     }
     
     // The time of interval for API request.
+    @discardableResult
     public func interval(milliseconds ms: Double) -> Self {
 
         interval = ms

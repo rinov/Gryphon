@@ -1,6 +1,6 @@
 {
   "name": "Gryphon",
-  "version": "2.0.0",
+  "version": "2.0.4",
   "summary": "Type safe REST API kiti for Swift.",
   "description": "Gryphon is an HTTP client kit that's type safe and convenient.",
   "homepage": "https://github.com/rinov/Gryphon",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/rinov/Gryphon.git",
-    "tag": "2.0.0"
+    "tag": "2.0.4"
   },
   "platforms": {
     "ios": "8.3"

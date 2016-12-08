@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Gryphon'
-  s.version          = '2.0.3'
+  s.version          = '2.0.4'
   s.summary          = 'Type safe REST API kiti for Swift.'
   s.description      = 'Gryphon is an HTTP client kit that\'s type safe and convenient.'
   s.homepage         = 'https://github.com/rinov/Gryphon'

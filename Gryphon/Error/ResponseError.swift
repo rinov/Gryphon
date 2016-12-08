@@ -13,6 +13,6 @@ public enum ResponseError: Error {
     case unacceptableStatusCode(Int)
 
     // If the response is unexpected.
-    case unexceptedResponse(AnyObject)
+    case unexceptedResponse(String)
         
 }

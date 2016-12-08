@@ -42,19 +42,12 @@ public final class Query {
         
     }
     
-    public func append(_ key: String, value: AnyObject) -> Self {
+    @discardableResult
+    public func append<T: Hashable>(_ key: String, value: T?) -> Self {
         
-        queries[key] = value
+        guard let object = value as? AnyObject else { return self }
         
-        return self
-        
-    }
-    
-    public func append(_ key: String, value: AnyObject?) -> Self {
-
-        guard let value = value else { return self }
-        
-        queries[key] = value
+        queries[key] = object
         
         return self
     }

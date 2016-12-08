@@ -10,46 +10,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Example for GET method
-
-        _ = API.Messages.getMessage()
-            .retry(max: 5)
-            .interval(milliseconds: 1000)
-        
-            .success { response in
-
-                print("GET success!")
-                print("Message=\(response.result)")
-                
-            }
-
-            .failure { error in
-
-                print("GET Error!")
-                
-            }
-        
-        // Example for POST method
-        
-        _ = API.Messages.postMessage()
-
-            .success { response in
-                
-                print("POST success!")
-                print("Status code=\(response)")
-                
-            }
-            
-            .failure { error in
-                
-                print("POST Error!")
-                
-            }
-        
     }
     
+    // Example for GET method
+    @IBAction func getMessage(_ sender: AnyObject) {
+        
+        
+        API.Messages.getMessage()
+            .success { [weak self] response in
+                self?.textView.text = "GET: SUCCESS\nMessage=\(response.result)"
+            }
+            .failure { [weak self] error in
+                self?.textView.text = "GET: FAILED"
+            }
+
+    }
+    
+    // Example for POST method with option
+    @IBAction func postMessage(_ sender: AnyObject) {
+
+        API.Messages.postMessage()
+            .retry(max: 5)
+            .interval(milliseconds: 1000)
+            .success { [weak self] response in
+                self?.textView.text = "POST: SUCCESS\nMessage=\(response)"
+            }
+            .failure { [weak self] error in
+                self?.textView.text = "POST: FAILED"
+            }
+
+    }
 }
 

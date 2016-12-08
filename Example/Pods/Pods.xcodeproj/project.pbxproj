@@ -12,28 +12,28 @@
 		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
 		16C63884D418C923723AEBCA15AE6E78 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2958DBEE6E99334A07AFCAAADEE242 /* Query.swift */; };
 		2F6E9F7BF2239DFCFD418D7CC49FCA50 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A3F4DB74BD1BAD3F2E90F73A0A5CBC /* ResponseError.swift */; };
+		37CE191E91DAF53A737C6E278FBBA84A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */; };
 		3FB31DBD6B90CA43C78A3FC9A6C68640 /* Pods-Gryphon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E73053843ACE6B3F4232FD012FC94 /* Pods-Gryphon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
-		62DC85A100C636CE39714B3DD47E8BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		6C53F6BD4427DF6C4CF90A0E6F1690E1 /* Pods-Gryphon_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2109BDDE83A89527EF4597602CB22BEA /* Pods-Gryphon_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E7F66A5DF4D803605BE59FDFA4BC2FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		772E5548F3794DE3A284808B9F2B4DD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		7940EA68C92CD94DE2760ECE37D3AD4D /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B4363A3D7FA602AC9711A4F3893F /* RequestError.swift */; };
 		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */; };
 		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */; };
 		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1C119BCE81C53F76CAC2BE27C38E0 /* Alamofire-dummy.m */; };
 		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44A27EFBB0DA84D738057B77F3413B1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A0A2C083CB92958391871AA9D05C415E /* Pods-Gryphon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A080326028274BE1F53789F7F00DA5CE /* Pods-Gryphon_Example-dummy.m */; };
 		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
 		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */; };
+		B44FE5E86386E8F3EA814AD191F52D0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */; };
 		BB25DF0ADC99EB8FE856B853461D3AA7 /* Gryphon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F97CA68F7380430F729C8AA3DC839 /* Gryphon-dummy.m */; };
 		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
 		C641FEAFC29B9457419BAA1050DBF95D /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE53041CBFD569400C99B2A75F9BBC /* Requestable.swift */; };
 		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */; };
-		C819CD698C19059E59470618095E4AAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C9F90C2C178321C30D5145422B636837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		DCB4E6C437C380844CD9A3C6D0DFBE58 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCC1E15EFE2829ABD82C8E07260804 /* ConnectionError.swift */; };
 		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
 		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
@@ -111,7 +111,7 @@
 		C3DF6F0FD9C5683309D0CF48173BDFDA /* Pods-Gryphon_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gryphon_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4BAB6F8604EBC56DCF71BA270BE9B1D /* Gryphon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gryphon-prefix.pch"; sourceTree = "<group>"; };
 		CA2958DBEE6E99334A07AFCAAADEE242 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D342EBC7E81A64EE6FA2BF82B476FA2C /* Pods-Gryphon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gryphon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D692DA4DE9410ECDBC602D0CE98F8F14 /* Pods-Gryphon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gryphon_Tests.modulemap"; sourceTree = "<group>"; };
 		DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DC85A100C636CE39714B3DD47E8BBF /* Foundation.framework in Frameworks */,
+				772E5548F3794DE3A284808B9F2B4DD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C819CD698C19059E59470618095E4AAA /* Foundation.framework in Frameworks */,
+				37CE191E91DAF53A737C6E278FBBA84A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */,
+				C9F90C2C178321C30D5145422B636837 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7F66A5DF4D803605BE59FDFA4BC2FF /* Foundation.framework in Frameworks */,
+				B44FE5E86386E8F3EA814AD191F52D0F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,14 +230,6 @@
 			path = "Target Support Files/Pods-Gryphon_Example";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		4078FDF55F18C13E73D9EAE5E4938308 /* Gryphon */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +273,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -315,7 +315,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -461,14 +461,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0800C1F180E5A6E5D69A766CF0C823A8 = {
-						LastSwiftMigration = 0800;
-					};
-					EDF5AF9E22B90B1229A8DE08E9AF1553 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";

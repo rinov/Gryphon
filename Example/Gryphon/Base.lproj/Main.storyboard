@@ -1,25 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Gryphon_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Gryphon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RC-l1-sFQ">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyw-oC-6uo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9IN-cD-oTf"/>
+                                </constraints>
+                                <state key="normal" title="postMessage"/>
+                                <connections>
+                                    <action selector="postMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h3i-Fd-atp"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="API response is here:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-fE-Yr9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="daU-c5-dan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbr-9A-GpI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XJ9-Yx-bn4"/>
+                                </constraints>
+                                <state key="normal" title="getMessage"/>
+                                <connections>
+                                    <action selector="getMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ypM-od-YnE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7RC-l1-sFQ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="4ce-vL-7cZ"/>
+                            <constraint firstItem="Zbr-9A-GpI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="5oh-Uk-XDM"/>
+                            <constraint firstItem="7RC-l1-sFQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="8UL-jr-4gR"/>
+                            <constraint firstAttribute="bottom" secondItem="Zbr-9A-GpI" secondAttribute="bottom" constant="15" id="9sV-C6-Pbs"/>
+                            <constraint firstAttribute="bottom" secondItem="Xyw-oC-6uo" secondAttribute="bottom" constant="15" id="BRf-i0-UUs"/>
+                            <constraint firstItem="Xyw-oC-6uo" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="CWN-nf-CFe"/>
+                            <constraint firstItem="Zbr-9A-GpI" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.5" id="fzV-XP-ts9"/>
+                            <constraint firstAttribute="trailing" secondItem="Xyw-oC-6uo" secondAttribute="trailing" id="pWj-Lz-2Ug"/>
+                            <constraint firstItem="mbc-fE-Yr9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="10" id="qJd-qc-kJp"/>
+                            <constraint firstItem="mbc-fE-Yr9" firstAttribute="top" secondItem="7RC-l1-sFQ" secondAttribute="bottom" constant="10" id="qLp-DR-APJ"/>
+                            <constraint firstAttribute="trailing" secondItem="mbc-fE-Yr9" secondAttribute="trailing" constant="10" id="sz9-vy-kmf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="mbc-fE-Yr9" id="Ntg-4B-H1F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="71.514242878560722"/>
         </scene>
     </scenes>
 </document>

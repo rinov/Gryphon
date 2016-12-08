@@ -12,11 +12,7 @@ import Gryphon
 
 final class API {
 
-    /*
-     *
-     * Your common property or function.
-     *
-     */
+    static let tutorialURL = "http://rinov.jp/"
     
 }
 
@@ -28,7 +24,7 @@ extension API {
         
         static var baseURL: String {
             
-            return "http://rinov.jp/"
+            return API.tutorialURL
             
         }
 
@@ -51,9 +47,7 @@ extension API {
                         // Object mapping in your favorite way.
                         let result = (response.result.value as! [AnyObject])[0]["result"] as! String
 
-                        let yourOwnCheck = true
-                        
-                        if yourOwnCheck {
+                        if true /* This is your own validation */ {
                             
                             let message = Message(message: result)
 
@@ -61,8 +55,7 @@ extension API {
                             
                         }else{
                             
-                            let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
+                            failure(ResponseError.unexceptedResponse(response.result.description))
                             
                         }
                         
@@ -83,18 +76,13 @@ extension API {
                 Alamofire.request(path, method: .post, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
                         
-                        // Object mapping in your favorite way
-                        
-                        let yourOwnCheck = true
-                        
-                        if yourOwnCheck {
+                        if true /* This is your own validation */ {
                             
                             success(response.response?.statusCode ?? 0)
                             
                         }else{
                             
-                            let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
+                            failure(ResponseError.unexceptedResponse(response.result.description))
                             
                         }
                         

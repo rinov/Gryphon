@@ -3,7 +3,7 @@
 [![CI Status](https://travis-ci.org/rinov/Gryphon.svg?branch=master)](https://travis-ci.org/rinov/Gryphon.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Gryphon.svg?style=flat)](http://cocoapods.org/pods/Gryphon)
 [![Platform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
-[![Language](https://img.shields.io/badge/Language-Swift2.3-blue.svg)](https://img.shields.io/badge/Language-Swift2.3-blue.svg)
+[![Language](https://img.shields.io/badge/Language-Swift%203.0%20and%202.3%20are%20compatible-blue.svg)]
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)](https://img.shields.io/badge/LICENSE-MIT-yellow.svg)
 
 Gryphon is a REST API kit that's type safe and convenient for Swift :yum:

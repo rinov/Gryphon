@@ -7,57 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */; };
-		0DEB946C3532BE842C2DC77EE87D5B47 /* Gryphon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C10870CD4C53A4F81DC1FD6EEF42E4DB /* Gryphon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
-		16C63884D418C923723AEBCA15AE6E78 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2958DBEE6E99334A07AFCAAADEE242 /* Query.swift */; };
-		2F6E9F7BF2239DFCFD418D7CC49FCA50 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A3F4DB74BD1BAD3F2E90F73A0A5CBC /* ResponseError.swift */; };
-		3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */; };
-		3FB31DBD6B90CA43C78A3FC9A6C68640 /* Pods-Gryphon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E73053843ACE6B3F4232FD012FC94 /* Pods-Gryphon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
-		62DC85A100C636CE39714B3DD47E8BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		6C53F6BD4427DF6C4CF90A0E6F1690E1 /* Pods-Gryphon_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2109BDDE83A89527EF4597602CB22BEA /* Pods-Gryphon_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E7F66A5DF4D803605BE59FDFA4BC2FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7940EA68C92CD94DE2760ECE37D3AD4D /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B4363A3D7FA602AC9711A4F3893F /* RequestError.swift */; };
-		7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */; };
-		86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */; };
-		8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1C119BCE81C53F76CAC2BE27C38E0 /* Alamofire-dummy.m */; };
-		907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44A27EFBB0DA84D738057B77F3413B1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A0A2C083CB92958391871AA9D05C415E /* Pods-Gryphon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A080326028274BE1F53789F7F00DA5CE /* Pods-Gryphon_Example-dummy.m */; };
-		A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
-		AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */; };
-		B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */; };
-		BB25DF0ADC99EB8FE856B853461D3AA7 /* Gryphon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F97CA68F7380430F729C8AA3DC839 /* Gryphon-dummy.m */; };
-		C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
-		C641FEAFC29B9457419BAA1050DBF95D /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE53041CBFD569400C99B2A75F9BBC /* Requestable.swift */; };
-		C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */; };
-		C819CD698C19059E59470618095E4AAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		DCB4E6C437C380844CD9A3C6D0DFBE58 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCC1E15EFE2829ABD82C8E07260804 /* ConnectionError.swift */; };
-		DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
-		E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
-		E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */; };
-		E53F5C15918B46476C18501DDE6A0657 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784FE5E5D196C7E6012F2C36DDF96CB /* Task.swift */; };
-		E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */; };
-		F50C9D67B64CAA56FF690DDA6EC6250C /* Pods-Gryphon_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE09892564F6A9A024FA1219D7674189 /* Pods-Gryphon_Tests-dummy.m */; };
-		FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */; };
+		03C1C25FC293F7F9D7325E5B02A8168E /* Pods-Gryphon_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2109BDDE83A89527EF4597602CB22BEA /* Pods-Gryphon_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D667069B23F14D80D0BD13C17D29B20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44A27EFBB0DA84D738057B77F3413B1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CF94BF041745827D1B24FE6577B1498 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		268B8B1318EF4C3ECA82A9448CB55E72 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A784FE5E5D196C7E6012F2C36DDF96CB /* Task.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
+		521359549FEDDEB3E632437F424ABB1E /* Pods-Gryphon_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A080326028274BE1F53789F7F00DA5CE /* Pods-Gryphon_Example-dummy.m */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
+		5EB9DFED85C7DABC30AF338626635FFA /* Pods-Gryphon_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE09892564F6A9A024FA1219D7674189 /* Pods-Gryphon_Tests-dummy.m */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
+		6A39DA134750840292A9DAEF8D93ABF5 /* Pods-Gryphon_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5E73053843ACE6B3F4232FD012FC94 /* Pods-Gryphon_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
+		899BB2995ABE3ECBECD58410E3C07CAB /* Gryphon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C10870CD4C53A4F81DC1FD6EEF42E4DB /* Gryphon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A9D15228DBEF29CCB956C1CE5DBCC09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
+		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1C119BCE81C53F76CAC2BE27C38E0 /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */; };
+		BA352FC62D7FFDCA70875455D0ABBC24 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C2B4363A3D7FA602AC9711A4F3893F /* RequestError.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */; };
+		C296CF50FD60E4E6B3D492E548606C22 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE53041CBFD569400C99B2A75F9BBC /* Requestable.swift */; };
+		C6397DEDF567F07BCD7418AA82269D25 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCC1E15EFE2829ABD82C8E07260804 /* ConnectionError.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */; };
+		CBD0333C227D56B10009D3FF3EEF4198 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A3F4DB74BD1BAD3F2E90F73A0A5CBC /* ResponseError.swift */; };
+		E8BFAD8C5E118629C0FBC21A8632456B /* Gryphon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B67F97CA68F7380430F729C8AA3DC839 /* Gryphon-dummy.m */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */; };
+		F8A8DF9F8FDDEB9E57122BB0A4530F4E /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2958DBEE6E99334A07AFCAAADEE242 /* Query.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8AAB0D0EB15ED3A4AF919147ECACB987 /* PBXContainerItemProxy */ = {
+		2733FCD1AF61868B5F0FCDEE99F8A1CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
-			remoteInfo = Alamofire;
-		};
-		D58E52767BDFBCE0997BBDBCDC912123 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0800C1F180E5A6E5D69A766CF0C823A8;
+			remoteGlobalIDString = E44E0E3536AA8151F4002C98A161238C;
 			remoteInfo = Gryphon;
+		};
+		A5BA50DB6E20A238ECBFDF1BC326BC1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,22 +84,22 @@
 		66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		6DDCC1E15EFE2829ABD82C8E07260804 /* ConnectionError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		76DB133D50A6E19B6103293B024F7BC4 /* Gryphon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Gryphon.xcconfig; sourceTree = "<group>"; };
-		7D141D1953E5C6E67E362CE73090E48A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		7D89300F633E90D52D90F2879F8740F1 /* Gryphon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gryphon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D141D1953E5C6E67E362CE73090E48A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		7D89300F633E90D52D90F2879F8740F1 /* Gryphon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Gryphon.framework; path = Gryphon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87065E6DC93AABF060EEBEA2C2C329A3 /* Pods-Gryphon_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gryphon_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		887DA26CB2C43C064C5B56B9CBDA4EA1 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		887DA26CB2C43C064C5B56B9CBDA4EA1 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8352E3D232897F3B8E22610019C4AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A3F4DB74BD1BAD3F2E90F73A0A5CBC /* ResponseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		969D62D5C1F80EA0E3DC3D957C5EEDF7 /* Pods-Gryphon_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gryphon_Example-resources.sh"; sourceTree = "<group>"; };
 		A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		A080326028274BE1F53789F7F00DA5CE /* Pods-Gryphon_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Gryphon_Example-dummy.m"; sourceTree = "<group>"; };
 		A784FE5E5D196C7E6012F2C36DDF96CB /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AB095809C7E565B31D54E8F86E5DA482 /* Pods-Gryphon_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gryphon_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ABF005D8CCF28A93F570835AED32C255 /* Pods_Gryphon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF005D8CCF28A93F570835AED32C255 /* Pods_Gryphon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gryphon_Tests.framework; path = "Pods-Gryphon_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		B42191E60D51F793D1A0D60B9B73B2F9 /* Pods_Gryphon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gryphon_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42191E60D51F793D1A0D60B9B73B2F9 /* Pods_Gryphon_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Gryphon_Example.framework; path = "Pods-Gryphon_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44A27EFBB0DA84D738057B77F3413B1 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		B67F97CA68F7380430F729C8AA3DC839 /* Gryphon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gryphon-dummy.m"; sourceTree = "<group>"; };
 		BC1A7A6A190F789A3E615C19DBEC6812 /* Pods-Gryphon_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gryphon_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,50 +111,50 @@
 		C3DF6F0FD9C5683309D0CF48173BDFDA /* Pods-Gryphon_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gryphon_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4BAB6F8604EBC56DCF71BA270BE9B1D /* Gryphon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Gryphon-prefix.pch"; sourceTree = "<group>"; };
 		CA2958DBEE6E99334A07AFCAAADEE242 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D342EBC7E81A64EE6FA2BF82B476FA2C /* Pods-Gryphon_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Gryphon_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D692DA4DE9410ECDBC602D0CE98F8F14 /* Pods-Gryphon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gryphon_Tests.modulemap"; sourceTree = "<group>"; };
+		D692DA4DE9410ECDBC602D0CE98F8F14 /* Pods-Gryphon_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Gryphon_Tests.modulemap"; sourceTree = "<group>"; };
 		DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		E1C2B4363A3D7FA602AC9711A4F3893F /* RequestError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		E2CA6EAE241818247BA5436E027E5CA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		E899418CB4503855886A6753F2E251EF /* Pods-Gryphon_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Gryphon_Example.modulemap"; sourceTree = "<group>"; };
-		F6B622B98D6C2EF15F3F5CFC22F2E199 /* Gryphon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Gryphon.modulemap; sourceTree = "<group>"; };
+		E899418CB4503855886A6753F2E251EF /* Pods-Gryphon_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Gryphon_Example.modulemap"; sourceTree = "<group>"; };
+		F6B622B98D6C2EF15F3F5CFC22F2E199 /* Gryphon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Gryphon.modulemap; sourceTree = "<group>"; };
 		FA4A4C5ADFBD997A07FC03DD90E06667 /* Pods-Gryphon_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Gryphon_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		556FB9BAB833E56521700195134E7739 /* Frameworks */ = {
+		169BABA847E3D5F3633E092270234893 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DC85A100C636CE39714B3DD47E8BBF /* Foundation.framework in Frameworks */,
+				0D667069B23F14D80D0BD13C17D29B20 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BFE78927D6CA6997EF3BA0441453E1E /* Frameworks */ = {
+		8593E7949DD23BF0FEC9C64942C00474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C819CD698C19059E59470618095E4AAA /* Foundation.framework in Frameworks */,
+				9A9D15228DBEF29CCB956C1CE5DBCC09 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */,
+				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBC604D97CDA691E442C670C83647106 /* Frameworks */ = {
+		C61A55E7E3CCD99519BCF99E0052F00E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7F66A5DF4D803605BE59FDFA4BC2FF /* Foundation.framework in Frameworks */,
+				1CF94BF041745827D1B24FE6577B1498 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +201,7 @@
 				B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */,
 				55F14F994FE7AB51F028BFE66CEF3106 /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -228,14 +229,6 @@
 			);
 			name = "Pods-Gryphon_Example";
 			path = "Target Support Files/Pods-Gryphon_Example";
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		4078FDF55F18C13E73D9EAE5E4938308 /* Gryphon */ = {
@@ -269,6 +262,7 @@
 				E1C2B4363A3D7FA602AC9711A4F3893F /* RequestError.swift */,
 				92A3F4DB74BD1BAD3F2E90F73A0A5CBC /* ResponseError.swift */,
 			);
+			name = Error;
 			path = Error;
 			sourceTree = "<group>";
 		};
@@ -279,6 +273,14 @@
 				1501E52378755D96A71AC9036433CF7D /* Pods-Gryphon_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -315,7 +317,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -328,6 +330,7 @@
 				A784FE5E5D196C7E6012F2C36DDF96CB /* Task.swift */,
 				6514578A4CCF3F9B2A8C4EADD6EF082B /* Error */,
 			);
+			name = Gryphon;
 			path = Gryphon;
 			sourceTree = "<group>";
 		};
@@ -348,82 +351,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4C01350E0DEE8FE93F92E7B655878BEA /* Headers */ = {
+		3979A8F251CF589CD6F45066DF1650F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB31DBD6B90CA43C78A3FC9A6C68640 /* Pods-Gryphon_Tests-umbrella.h in Headers */,
+				899BB2995ABE3ECBECD58410E3C07CAB /* Gryphon-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		668C5B49CDD9B094F84FB2D6770FC3FB /* Headers */ = {
+		81328C36F96C97F9FA7E21BD5F91C98B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEB946C3532BE842C2DC77EE87D5B47 /* Gryphon-umbrella.h in Headers */,
+				03C1C25FC293F7F9D7325E5B02A8168E /* Pods-Gryphon_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C6971CF1A3EC05D43976C1F855C3EB49 /* Headers */ = {
+		8B7C1EB936549AA07B7E2AF912498037 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C53F6BD4427DF6C4CF90A0E6F1690E1 /* Pods-Gryphon_Example-umbrella.h in Headers */,
+				6A39DA134750840292A9DAEF8D93ABF5 /* Pods-Gryphon_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0800C1F180E5A6E5D69A766CF0C823A8 /* Gryphon */ = {
+		42FF692EC2D0D5193B1C973DE246EF7A /* Pods-Gryphon_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14A950177B37922AAE4A654F8CFD3186 /* Build configuration list for PBXNativeTarget "Gryphon" */;
+			buildConfigurationList = 23AB8981D8CAFBD8EB95F354AE31A70A /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Tests" */;
 			buildPhases = (
-				972346352ACDA1B2497FF631B6F2A24E /* Sources */,
-				556FB9BAB833E56521700195134E7739 /* Frameworks */,
-				668C5B49CDD9B094F84FB2D6770FC3FB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Gryphon;
-			productName = Gryphon;
-			productReference = 7D89300F633E90D52D90F2879F8740F1 /* Gryphon.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				120C4E824DDCCA024C170A491FF221A5 /* Sources */,
-				B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */,
-				EFDF3B631BBB965A372347705CA14854 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = 887DA26CB2C43C064C5B56B9CBDA4EA1 /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C6599133B370C94E9F18C1EBF995DAC9 /* Pods-Gryphon_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB1EC49880117DB864EA25262E22F631 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Tests" */;
-			buildPhases = (
-				F7D2CE350ED69F09CA7D3F026D2168E4 /* Sources */,
-				DBC604D97CDA691E442C670C83647106 /* Frameworks */,
-				4C01350E0DEE8FE93F92E7B655878BEA /* Headers */,
+				2A04ED00C445E1F2F102FA611E8A8926 /* Sources */,
+				169BABA847E3D5F3633E092270234893 /* Frameworks */,
+				8B7C1EB936549AA07B7E2AF912498037 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -434,23 +403,57 @@
 			productReference = ABF005D8CCF28A93F570835AED32C255 /* Pods_Gryphon_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EDF5AF9E22B90B1229A8DE08E9AF1553 /* Pods-Gryphon_Example */ = {
+		57A9BF8BB33A66EBF5675BDEF0C29B3A /* Pods-Gryphon_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AAB6A53CA871691E66DD9C644693D08 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Example" */;
+			buildConfigurationList = 64C5987442AF780AB4A37A5AD81043F1 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Example" */;
 			buildPhases = (
-				BB653A6591BE4E999EDD187F91501776 /* Sources */,
-				9BFE78927D6CA6997EF3BA0441453E1E /* Frameworks */,
-				C6971CF1A3EC05D43976C1F855C3EB49 /* Headers */,
+				7B240639FE4F1FDDCDC90C0BC3A7B0EE /* Sources */,
+				8593E7949DD23BF0FEC9C64942C00474 /* Frameworks */,
+				81328C36F96C97F9FA7E21BD5F91C98B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3743916D90D7642CED47B4950608FB51 /* PBXTargetDependency */,
-				F88167863C483F806920DBBE0D607733 /* PBXTargetDependency */,
+				36FC80DAFF2AD9F617DC585D7C895F49 /* PBXTargetDependency */,
+				5F0D796E58DA0C8BAB646A7B4316C311 /* PBXTargetDependency */,
 			);
 			name = "Pods-Gryphon_Example";
 			productName = "Pods-Gryphon_Example";
 			productReference = B42191E60D51F793D1A0D60B9B73B2F9 /* Pods_Gryphon_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 887DA26CB2C43C064C5B56B9CBDA4EA1 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E44E0E3536AA8151F4002C98A161238C /* Gryphon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BD742D6A4DA856A7134DE254E4172FD /* Build configuration list for PBXNativeTarget "Gryphon" */;
+			buildPhases = (
+				8D9127107D124F14828E4F8FAF08F20B /* Sources */,
+				C61A55E7E3CCD99519BCF99E0052F00E /* Frameworks */,
+				3979A8F251CF589CD6F45066DF1650F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gryphon;
+			productName = Gryphon;
+			productReference = 7D89300F633E90D52D90F2879F8740F1 /* Gryphon.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -461,14 +464,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					0800C1F180E5A6E5D69A766CF0C823A8 = {
-						LastSwiftMigration = 0800;
-					};
-					EDF5AF9E22B90B1229A8DE08E9AF1553 = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -482,84 +477,84 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
-				0800C1F180E5A6E5D69A766CF0C823A8 /* Gryphon */,
-				EDF5AF9E22B90B1229A8DE08E9AF1553 /* Pods-Gryphon_Example */,
-				C6599133B370C94E9F18C1EBF995DAC9 /* Pods-Gryphon_Tests */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				E44E0E3536AA8151F4002C98A161238C /* Gryphon */,
+				57A9BF8BB33A66EBF5675BDEF0C29B3A /* Pods-Gryphon_Example */,
+				42FF692EC2D0D5193B1C973DE246EF7A /* Pods-Gryphon_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		120C4E824DDCCA024C170A491FF221A5 /* Sources */ = {
+		2A04ED00C445E1F2F102FA611E8A8926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62143065F94E53F437DCE5D7A998D66D /* AFError.swift in Sources */,
-				8D463A0A4C65C02FDD5211F0F3C6F8B8 /* Alamofire-dummy.m in Sources */,
-				7CA5A9BA5246FDA8227233E310029392 /* Alamofire.swift in Sources */,
-				E2A1C34237B4E928E5F85C097F4C2551 /* DispatchQueue+Alamofire.swift in Sources */,
-				C7A3408350643ADE1018826C766EE356 /* MultipartFormData.swift in Sources */,
-				E59BF19C0AFA68B741552319FC478C7B /* NetworkReachabilityManager.swift in Sources */,
-				0C1B4E9FFB8B81E8833A3BAD537B1990 /* Notifications.swift in Sources */,
-				AF158CAAF4DD319009AFC855DC995D90 /* ParameterEncoding.swift in Sources */,
-				12118C354EFA36292F82A8D0CFCE45B2 /* Request.swift in Sources */,
-				86ED08F33B7D357932A9AB743E9D9EA7 /* Response.swift in Sources */,
-				B8154C96802336E5DDA5CEE97C3180A0 /* ResponseSerialization.swift in Sources */,
-				DF1BBF94997A2F4248B42B25EA919EC2 /* Result.swift in Sources */,
-				C0AEA97E7684DDAD56998C0AE198A433 /* ServerTrustPolicy.swift in Sources */,
-				907AB123FBC8BC9340D5B7350CE828DF /* SessionDelegate.swift in Sources */,
-				A79AC30123B0C2177D67F6ED6A1B3215 /* SessionManager.swift in Sources */,
-				E1F583CB4A68A928CD197250AA752926 /* TaskDelegate.swift in Sources */,
-				3982B850C43B41BA6D25F440F0412E9B /* Timeline.swift in Sources */,
-				FFFDD494EE6D1B83DDAF5F2721F685A6 /* Validation.swift in Sources */,
+				5EB9DFED85C7DABC30AF338626635FFA /* Pods-Gryphon_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		972346352ACDA1B2497FF631B6F2A24E /* Sources */ = {
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB4E6C437C380844CD9A3C6D0DFBE58 /* ConnectionError.swift in Sources */,
-				BB25DF0ADC99EB8FE856B853461D3AA7 /* Gryphon-dummy.m in Sources */,
-				16C63884D418C923723AEBCA15AE6E78 /* Query.swift in Sources */,
-				C641FEAFC29B9457419BAA1050DBF95D /* Requestable.swift in Sources */,
-				7940EA68C92CD94DE2760ECE37D3AD4D /* RequestError.swift in Sources */,
-				2F6E9F7BF2239DFCFD418D7CC49FCA50 /* ResponseError.swift in Sources */,
-				E53F5C15918B46476C18501DDE6A0657 /* Task.swift in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB653A6591BE4E999EDD187F91501776 /* Sources */ = {
+		7B240639FE4F1FDDCDC90C0BC3A7B0EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A2C083CB92958391871AA9D05C415E /* Pods-Gryphon_Example-dummy.m in Sources */,
+				521359549FEDDEB3E632437F424ABB1E /* Pods-Gryphon_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7D2CE350ED69F09CA7D3F026D2168E4 /* Sources */ = {
+		8D9127107D124F14828E4F8FAF08F20B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50C9D67B64CAA56FF690DDA6EC6250C /* Pods-Gryphon_Tests-dummy.m in Sources */,
+				C6397DEDF567F07BCD7418AA82269D25 /* ConnectionError.swift in Sources */,
+				E8BFAD8C5E118629C0FBC21A8632456B /* Gryphon-dummy.m in Sources */,
+				F8A8DF9F8FDDEB9E57122BB0A4530F4E /* Query.swift in Sources */,
+				C296CF50FD60E4E6B3D492E548606C22 /* Requestable.swift in Sources */,
+				BA352FC62D7FFDCA70875455D0ABBC24 /* RequestError.swift in Sources */,
+				CBD0333C227D56B10009D3FF3EEF4198 /* ResponseError.swift in Sources */,
+				268B8B1318EF4C3ECA82A9448CB55E72 /* Task.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3743916D90D7642CED47B4950608FB51 /* PBXTargetDependency */ = {
+		36FC80DAFF2AD9F617DC585D7C895F49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = 8AAB0D0EB15ED3A4AF919147ECACB987 /* PBXContainerItemProxy */;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = A5BA50DB6E20A238ECBFDF1BC326BC1F /* PBXContainerItemProxy */;
 		};
-		F88167863C483F806920DBBE0D607733 /* PBXTargetDependency */ = {
+		5F0D796E58DA0C8BAB646A7B4316C311 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Gryphon;
-			target = 0800C1F180E5A6E5D69A766CF0C823A8 /* Gryphon */;
-			targetProxy = D58E52767BDFBCE0997BBDBCDC912123 /* PBXContainerItemProxy */;
+			target = E44E0E3536AA8151F4002C98A161238C /* Gryphon */;
+			targetProxy = 2733FCD1AF61868B5F0FCDEE99F8A1CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -608,9 +603,77 @@
 			};
 			name = Debug;
 		};
-		695D4770735824B15D4AFBE8013F2872 /* Debug */ = {
+		41B3B52F4FDCB2A70A441C631145F9AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76DB133D50A6E19B6103293B024F7BC4 /* Gryphon.xcconfig */;
+			baseConfigurationReference = C15A6AB9F2828A853342EA5003155236 /* Pods-Gryphon_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Gryphon_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gryphon_Example/Pods-Gryphon_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gryphon_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		621A10F5C0A994B466277661C1B2C19F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63B243EBD0378FD2D174A83AAC0EBE21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1A7A6A190F789A3E615C19DBEC6812 /* Pods-Gryphon_Tests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -623,17 +686,20 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Gryphon/Gryphon-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Gryphon/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Gryphon_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Gryphon/Gryphon.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Gryphon_Tests/Pods-Gryphon_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Gryphon;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Gryphon_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -641,7 +707,7 @@
 			};
 			name = Debug;
 		};
-		7F93EF234CD87F7448472375CC1EFA96 /* Debug */ = {
+		8C48CCCB862EC56A4174F6E1715688C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
 			buildSettings = {
@@ -674,7 +740,39 @@
 			};
 			name = Debug;
 		};
-		8C1931C2ECB69505FCE62431B8886D81 /* Debug */ = {
+		95F7E0041DB086D9190734353A581177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76DB133D50A6E19B6103293B024F7BC4 /* Gryphon.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Gryphon/Gryphon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gryphon/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Gryphon/Gryphon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Gryphon;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCD0FCEB4FBC25E4F867F81A4FB05C4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87065E6DC93AABF060EEBEA2C2C329A3 /* Pods-Gryphon_Example.debug.xcconfig */;
 			buildSettings = {
@@ -711,75 +809,7 @@
 			};
 			name = Debug;
 		};
-		8FAB1B008ABFDF5D4EBC4A2E8496CBE3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76DB133D50A6E19B6103293B024F7BC4 /* Gryphon.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Gryphon/Gryphon-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Gryphon/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Gryphon/Gryphon.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Gryphon;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B4C160811DC373FF875B6C45E9E2FE76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1A7A6A190F789A3E615C19DBEC6812 /* Pods-Gryphon_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gryphon_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gryphon_Tests/Pods-Gryphon_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gryphon_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C471C2CD3CDE1E1712385D58463BCA8A /* Release */ = {
+		DDD4C000FF976E42CE48398BB5615E62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA4A4C5ADFBD997A07FC03DD90E06667 /* Pods-Gryphon_Tests.release.xcconfig */;
 			buildSettings = {
@@ -806,38 +836,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_Gryphon_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -887,50 +885,56 @@
 			};
 			name = Release;
 		};
-		F58EEF449DB42E717470B19E0C5EAD77 /* Release */ = {
+		FF7BFE6CC75539BEB3A088281DF4E59A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C15A6AB9F2828A853342EA5003155236 /* Pods-Gryphon_Example.release.xcconfig */;
+			baseConfigurationReference = 76DB133D50A6E19B6103293B024F7BC4 /* Gryphon.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Gryphon_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Gryphon/Gryphon-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Gryphon/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Gryphon_Example/Pods-Gryphon_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Gryphon_Example;
+				MODULEMAP_FILE = "Target Support Files/Gryphon/Gryphon.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Gryphon;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14A950177B37922AAE4A654F8CFD3186 /* Build configuration list for PBXNativeTarget "Gryphon" */ = {
+		23AB8981D8CAFBD8EB95F354AE31A70A /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				695D4770735824B15D4AFBE8013F2872 /* Debug */,
-				8FAB1B008ABFDF5D4EBC4A2E8496CBE3 /* Release */,
+				63B243EBD0378FD2D174A83AAC0EBE21 /* Debug */,
+				DDD4C000FF976E42CE48398BB5615E62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BD742D6A4DA856A7134DE254E4172FD /* Build configuration list for PBXNativeTarget "Gryphon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7BFE6CC75539BEB3A088281DF4E59A /* Debug */,
+				95F7E0041DB086D9190734353A581177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -944,29 +948,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F93EF234CD87F7448472375CC1EFA96 /* Debug */,
-				DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */,
+				8C48CCCB862EC56A4174F6E1715688C9 /* Debug */,
+				621A10F5C0A994B466277661C1B2C19F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AAB6A53CA871691E66DD9C644693D08 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Example" */ = {
+		64C5987442AF780AB4A37A5AD81043F1 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C1931C2ECB69505FCE62431B8886D81 /* Debug */,
-				F58EEF449DB42E717470B19E0C5EAD77 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB1EC49880117DB864EA25262E22F631 /* Build configuration list for PBXNativeTarget "Pods-Gryphon_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4C160811DC373FF875B6C45E9E2FE76 /* Debug */,
-				C471C2CD3CDE1E1712385D58463BCA8A /* Release */,
+				DCD0FCEB4FBC25E4F867F81A4FB05C4C /* Debug */,
+				41B3B52F4FDCB2A70A441C631145F9AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

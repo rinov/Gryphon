@@ -13,41 +13,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Example for GET method
+        // Example for GET method.
+        API.Messages.getMessage()
+            .retry(max: 3)
+            .interval(milliseconds: 500)
+            .response{ result in
 
-        _ = API.Messages.getMessage()
-            .retry(max: 5)
-            .interval(milliseconds: 1000)
-        
-            .success { response in
-
-                print("GET success!")
-                print("Message=\(response.result)")
-                
+            switch result {
+            case let .response(message):
+                print("Message=\(message)")
+            case let .error(error):
+                print("Error=\(error)")
             }
 
-            .failure { error in
-
-                print("GET Error!")
-                
-            }
+        }
         
-        // Example for POST method
-        
-        _ = API.Messages.postMessage()
-
-            .success { response in
-                
-                print("POST success!")
-                print("Status code=\(response)")
-                
+        // Example for POST method.
+        // Only catch the response that is successful.
+        API.Messages.postMessage().response { result in
+            
+            if case let .response(statusCode) = result {
+                print("StatusCode=\(statusCode)")
             }
             
-            .failure { error in
-                
-                print("POST Error!")
-                
-            }
+        }
         
     }
     

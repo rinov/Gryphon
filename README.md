@@ -10,24 +10,20 @@ Gryphon is a REST API kit that's type safe and convenient for Swift :yum:
 
 [![Figure](http://i.imgur.com/i8Yqt8g.png)](http://i.imgur.com/i8Yqt8g.png)
 
+### Usage
 ```swift
 
 API.Endpoint.request()
         .retry(max: 3)
         .interval(milliseconds: 500)
-        
-        .success { response in
-            // Do something
-        }
-        
-        .failure { error in
+        .response{ result in
             // Do someting 
         }
 
 ```
 
 
-### How to use this?:eyes: (Example for retrieving from Twitter API)
+### How to use this?:eyes:
 
 First of all, Create an API class.
 
@@ -51,65 +47,44 @@ e.g. using `Alamofire`
 
 extension API {
 
-    final class Twitter: Requestable {
+    final class Messages: Requestable {
 
-        enum Router: String {
-        
-            case status = "/status/"
-            // ... and so on
-            
-        }
-        
-        var router: Router = .status
-            
         // required `Requestable`
         static var baseURL: String {
-            
-            return "https://api.twitter.com/1.1/statuses/"
-            
+            return "http://rinov.jp/"
         }
 
         // required `Requestable`
         static var path: String {
-            
-            return baseURL + router.rawValue
-            
+            return baseURL + "Gryphon-Tutorial.php"
         }
-        
-        // `Any` in TaskType is your Response class.
-        static func getTimeline() -> TaskType< Any, ErrorType> {
-            
-            // Switching the router
-            router = .status
-            
-            let task = TaskType { success, failure in
-                
-                Alamofire.request(.POST, path)
-                    .responseJSON(completionHandler: { response in
 
-                        // Object mapping in your favorite way.
+        // Returns message(String) from server or error reason(Error).
+        class func getMessage() -> Task<String, Error> {
 
-                        // If the mapping is succeed.
-                        if yourOwnCheck {
-                            
-                            success(response)
-                            
-                        }else{
-                            
-                            failure(ResponseError.unexceptedResponse("Cause(String) or AnyObject is available."))
-                            
-                        }
-                        
-                    })
-                
+        let task = Task<String, Error> { result in
+
+        Alamofire.request(path, method: .get, encoding: JSONEncoding.default)
+        .responseJSON(completionHandler: { response in
+
+            // Object mapping in your favorite way.
+            guard let message = (response.result.value as! [AnyObject])[0]["result"] as? String else {
+
+            let reason = response.result.description as AnyObject
+
+            return result(APIResult<String>.error(ResponseError.unexceptedResponse(reason)))
+
             }
-            
-            return task
-            
+
+            result(APIResult<String>.response(message))
+
+            })
+
         }
-        
+
+        return task
+
     }
-    
 }
 
 ```
@@ -118,35 +93,24 @@ After that you can use it like this.
 
 ```swift
 
-API.Twitter.getTimeline()
-        
-        // It will retry the API request if that is timeout or failed.
-        .retry(max: 3)
-        
-        // Specify the interval time of retry.
-        .interval(milliseconds: 500)
-        
-        // If the response is valid, This will be called.
-        .success { response in
+API.Messages.getMessage()
+    .retry(max: 3) // It will retry the API request if that is timeout or failed.
+    .interval(milliseconds: 500) // Specify the interval time of retry.
+    .response{ result in
+    /*
+    * You can use `result` without nil checking.
+    * The type of `result` is automatically inferred to your designation type.
+    * e.g. This case of `result` is a type of `String`
+    */
 
-            /*
-            * You can use `response` without nil checking.
-            * The type of `response` is automatically inferred to your Response class.
-            * e.g. your Model class is `Timeline`
-            */
-            
-            let timeline: Timeline = response // This is ok because response is NOT optional type
-            print(response.count) // this is ok because response have already object mapping
-            
-        }
-        
-        // If the response is INVALID, This will be called.
-        .failure { error in
+    switch result {
+    case let .response(message):
+    // Do something
+    case let .error(error):
+    // Do something
+    }
 
-            // Check the reason of error
-            print(error)
-            
-        }
+    }
 
 ```
 

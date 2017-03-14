@@ -13,9 +13,7 @@ import Gryphon
 final class API {
 
     /*
-     *
      * Your common property or function.
-     *
      */
     
 }
@@ -25,47 +23,33 @@ extension API {
     final class Messages: Requestable {
         
         // required `Requestable`
-        
         static var baseURL: String {
-            
             return "http://rinov.jp/"
-            
         }
 
         // required `Requestable`
-
         static var path: String {
-            
             return baseURL + "Gryphon-Tutorial.php"
-            
         }
         
-        // Returns Message class
-        class func getMessage() -> Task<Message, Error> {
+        // Returns message(String) from server or error reason(Error).
+        class func getMessage() -> Task<String, Error> {
             
-            let task = Task<Message, Error> { success, failure in
+            let task = Task<String, Error> { result in
                 
                 Alamofire.request(path, method: .get, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
 
                         // Object mapping in your favorite way.
-                        let result = (response.result.value as! [AnyObject])[0]["result"] as! String
-
-                        let yourOwnCheck = true
-                        
-                        if yourOwnCheck {
-                            
-                            let message = Message(message: result)
-
-                            success(message)
-                            
-                        }else{
+                        guard let message = (response.result.value as! [AnyObject])[0]["result"] as? String else {
                             
                             let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
                             
-                        }
+                            return result(APIResult<String>.error(ResponseError.unexceptedResponse(reason)))
                         
+                        }
+
+                        result(APIResult<String>.response(message))
                         
                     })
                 
@@ -75,29 +59,21 @@ extension API {
             
         }
         
-        // Returns status code
+        // Returns status code if the submittion is succeeded.
         class func postMessage() -> Task<Int, Error> {
             
-            let task = Task<Int, Error> { success, failure in
+            let task = Task<Int, Error> { result in
 
                 Alamofire.request(path, method: .post, encoding: JSONEncoding.default)
                     .responseJSON(completionHandler: { response in
+
+                        guard let statusCode = response.response?.statusCode else { return }
                         
-                        // Object mapping in your favorite way
-                        
-                        let yourOwnCheck = true
-                        
-                        if yourOwnCheck {
-                            
-                            success(response.response?.statusCode ?? 0)
-                            
+                        if 200...299 ~= statusCode {
+                            result(APIResult<Int>.response(statusCode))
                         }else{
-                            
-                            let reason = response.result.description as AnyObject
-                            failure(ResponseError.unexceptedResponse(reason))
-                            
+                            result(APIResult<Int>.error(ResponseError.unacceptableStatusCode(statusCode)))
                         }
-                        
                         
                     })
                 

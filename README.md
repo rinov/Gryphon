@@ -128,7 +128,7 @@ In your Podfile:
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-  pod 'Gryphon'
+  pod 'Gryphon', '~> 3.0'
 end
 
 ```

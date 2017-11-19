@@ -7,15 +7,12 @@
 //
 
 import Foundation
-import Alamofire
 import Gryphon
 
 final class API {
-
     /*
      * Your common property or function.
      */
-    
 }
 
 extension API {
@@ -29,60 +26,46 @@ extension API {
 
         // required `Requestable`
         static var path: String {
-            return baseURL + "Gryphon-Tutorial.php"
+            return "Gryphon-Tutorial.php"
         }
         
         // Returns message(String) from server or error reason(Error).
         class func getMessage() -> Task<String, Error> {
-            
             let task = Task<String, Error> { result in
-                
-                Alamofire.request(path, method: .get, encoding: JSONEncoding.default)
-                    .responseJSON(completionHandler: { response in
-
-                        // Object mapping in your favorite way.
-                        guard let message = (response.result.value as! [AnyObject])[0]["result"] as? String else {
-                            
-                            let reason = response.result.description as AnyObject
-                            
-                            return result(APIResult<String>.error(ResponseError.unexceptedResponse(reason)))
-                        
-                        }
-
-                        result(APIResult<String>.response(message))
-                        
-                    })
-                
+                let url = URL(string: baseURL + path)!
+                var request = URLRequest(url: url)
+                request.httpMethod = "GET"
+                let session = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    guard let data = data,
+                        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [AnyObject],
+                        let message = json?[0]["result"] as? String else {
+                            result(.error(ResponseError.unexceptedResponse(error as AnyObject)))
+                            return
+                    }
+                    result(.response(message))
+                })
+                session.resume()
             }
-            
             return task
-            
         }
         
         // Returns status code if the submittion is succeeded.
         class func postMessage() -> Task<Int, Error> {
-            
             let task = Task<Int, Error> { result in
-
-                Alamofire.request(path, method: .post, encoding: JSONEncoding.default)
-                    .responseJSON(completionHandler: { response in
-
-                        guard let statusCode = response.response?.statusCode else { return }
-                        
-                        if 200...299 ~= statusCode {
-                            result(APIResult<Int>.response(statusCode))
-                        }else{
-                            result(APIResult<Int>.error(ResponseError.unacceptableStatusCode(statusCode)))
-                        }
-                        
-                    })
-                
+                let url = URL(string: baseURL + path)!
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                let session = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                    guard let statusCode = (response as? HTTPURLResponse)?.statusCode else { return }
+                    if 200...299 ~= statusCode {
+                        result(.response(statusCode))
+                    }else{
+                        result(.error(ResponseError.unacceptableStatusCode(statusCode)))
+                    }
+                })
+                session.resume()
             }
-            
             return task
-            
         }
-        
     }
-
 }

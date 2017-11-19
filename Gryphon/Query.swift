@@ -7,9 +7,8 @@
 import Foundation
 
 public final class Query {
-    
     public init() {}
-    
+
     public subscript(key: String) -> AnyObject? {
         get {
             return hasKey(key) ? queries[key] : nil
@@ -53,7 +52,6 @@ public final class Query {
     }
     
     // MARK: Private Methods
-    
     fileprivate func joinElements() -> String {
         return queries.reduce("") { query, queries in
             query + "&" + queries.0 + "=" + String(describing: queries.1)

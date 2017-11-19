@@ -18,22 +18,22 @@ public final class Task<Response,Error> {
     public typealias Initializer = (_: @escaping (APIResult<Response>) -> Void) -> Void
 
     // The default value of maximum retry count.
-    fileprivate let maximumRetryCount: Int = 10
+    private let maximumRetryCount: Int = 10
     
     // The default value of maximum interval time(ms).
-    fileprivate let maximumIntervalTime: Double = 10000.0
+    private let maximumIntervalTime: Double = 10000.0
     
     // Result handler.
-    fileprivate var response: ((APIResult<Response>) -> Void)?
+    private var response: ((APIResult<Response>) -> Void)?
     
     // Initializer handler.
-    fileprivate var initializer: Initializer?
+    private var initializer: Initializer?
 
     // Retry count
-    fileprivate lazy var retry: Int = 0
+    private lazy var retry: Int = 0
 
     // Interval time of request
-    fileprivate lazy var interval: Double = 0.0
+    private lazy var interval: Double = 0.0
     
     // API response handler.
     @discardableResult
@@ -62,7 +62,7 @@ public final class Task<Response,Error> {
     
     // MARK: Private Methods
 
-    fileprivate func executeRequest() {
+    private func executeRequest() {
         initializer?({ result in
             switch result {
             case let .response(data):
@@ -75,7 +75,7 @@ public final class Task<Response,Error> {
     }
     
     // If `retry` count is one or more.
-    fileprivate func doRetry() {
+    private func doRetry() {
         if retry > maximumRetryCount {
             fatalError("The retry count is too many.\nPlease check the maximum retry count again.")
         }

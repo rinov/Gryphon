@@ -1,19 +1,16 @@
 PODS:
-  - Alamofire (4.0.1)
-  - Gryphon (3.0.0)
+  - Gryphon (3.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
   - Gryphon (from `../`)
 
 EXTERNAL SOURCES:
   Gryphon:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  Gryphon: a09030588557b8b64042ab2adeb2526a9e75582f
+  Gryphon: 075695686cca6d90dd25b642bc7b888f668716e9
 
-PODFILE CHECKSUM: c8b1a29e0c675b607d3b4771466b71905dbb1c99
+PODFILE CHECKSUM: 77d012253c5e228eda02c4cf77eb29a4530ed85f
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

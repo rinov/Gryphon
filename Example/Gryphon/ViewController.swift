@@ -8,37 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Example for GET method.
-        API.Messages.getMessage()
+        API
+            .Messages
+            .getMessage()
             .retry(max: 3)
             .interval(milliseconds: 500)
             .response{ result in
-
-            switch result {
-            case let .response(message):
-                print("Message=\(message)")
-            case let .error(error):
-                print("Error=\(error)")
+                switch result {
+                case let .response(message):
+                    print("Message=\(message)")
+                case let .error(error):
+                    print("Error=\(error)")
+                }
             }
-
-        }
         
         // Example for POST method.
-        // Only catch the response that is successful.
-        API.Messages.postMessage().response { result in
-            
-            if case let .response(statusCode) = result {
-                print("StatusCode=\(statusCode)")
+        API
+            .Messages
+            .postMessage()
+            .response { result in
+                switch result {
+                case let .response(statusCode):
+                    print("StatusCode=\(statusCode)")
+                case let .error(error):
+                    print("Error=\(error)")
+                }
             }
-            
-        }
-        
     }
-    
 }
 
